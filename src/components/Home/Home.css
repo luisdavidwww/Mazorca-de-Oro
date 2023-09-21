@@ -1,0 +1,150 @@
+
+  .header-container {
+    background-image: url('../../static/images/home/home.jpg');
+    background-color: rgba(0,0,0,0.5);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'PT Sans', sans-serif;
+  }
+  
+
+  .name-Concurso{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 20px;
+  }
+
+   h1 {
+    color: #fff;
+    font-size: 100px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 120px;
+    line-height: 100px;
+  }
+
+  .Titulo-Principal{
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .header-container > p {
+    margin-top: 2px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 32px;
+    font-family: 'PT Sans', sans-serif;
+  }
+  
+  .header-btns {
+    margin-top: 10px;
+    max-width: 500px;
+    margin: 10px;
+  }
+  
+  .btn-link{
+    text-decoration-line: none; 
+  }
+
+  .btn-main{
+    display: inline-block;
+    padding: 12px 26px;
+    font-size: 18px;
+    border-radius: 2px;
+    text-decoration-line: none;
+    outline: none;
+    border: 2px solid  #fff;
+    cursor: pointer;
+    margin: 10px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.btn-outline{
+    display: inline-block;
+    background-color: transparent;
+    color: #fff;
+    padding: 12px 26px;
+    border: 2px solid  #fff;
+    transition: all 0.3s ease-out;
+    font-size: 18px;
+    border-radius: 2px;
+    text-decoration-line: none;
+    outline: none;
+    cursor: pointer;
+    margin: 10px; 
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+
+  
+@media screen and (max-width: 960px) {
+    h1 {
+      font-size: 70px;
+    }
+    
+    .btn-main{
+        display: block;
+        text-decoration-line: none;
+        margin: 10px;
+        width: 100%;
+    }
+
+    .btn-outline{
+        display: block;
+        text-decoration-line: none;
+        margin: 10px;
+        width: 100%;
+    }
+  }
+  
+@media screen and (max-width: 768px) {
+    .header-container > h1 {
+      font-size: 50px;
+    }
+  
+    .header-container > p {
+      font-size: 30px;
+    }
+
+    .header-btns {
+        justify-content: center;
+        align-items: center;
+        margin-left: -15px;
+        text-decoration-line: none;
+      }
+
+    .btn-main{
+        display: block;
+        text-decoration-line: none;
+        margin: 10px;
+        width: 100%;
+    }
+
+    .btn-outline{
+        display: block;
+        text-decoration-line: none;
+        margin: 10px;
+        width: 100%;
+    }
+  }
+  
+  
+  
+.btn-outline:hover, .btn-main:hover {
+  transition: all 0.3s ease-out;
+  background: #C5CF2F;
+  border: 2px solid #C5CF2F;
+  color: #fff;
+  transition: 250ms;
+}
