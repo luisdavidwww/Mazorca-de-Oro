@@ -1,0 +1,108 @@
+.List__Options:hover{
+    z-index: 15;
+    cursor: pointer;
+    color:  #ffd800;
+  };
+
+
+ul {
+    list-style: none;
+}
+  
+li {
+    list-style: none;
+}
+  
+a{
+    text-decoration: none;
+}
+
+/* Container Principal*/
+.container_Dropdown_Options
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Aumentar la especificidad */
+body .container__Options {
+    display: flex;
+    position: absolute;
+    margin-top: 3.6rem;
+    width: 500px;
+    color:  #E2E2E2;
+    background-color: #161718;
+  }
+
+body .container__Options_Scroll {
+    display: flex;
+    position: absolute;
+    margin-top: 3.6rem;
+    width: 500px;
+    color:  #E2E2E2;
+    background-color: #acc0d4;
+    overflow-y: scroll !important;
+    height: 10vh;
+  }
+  
+  
+
+.btn_options{
+    display: flex;
+    font-size: 13px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    padding: 1.0rem;
+    color:  #E2E2E2;
+    background-color: #1d1e207c;
+    outline: none;
+    border: solid 1.9px #E2E2E2; 
+    border-radius: 2px;
+    margin-top: 0.5rem;
+    transition: 0.4s;
+  };
+
+.btn_options:hover{
+    border: 1.9px solid #ffd800;
+    transition: 0.4s;
+    width: 92%;
+    cursor: pointer !important;
+}
+.btn_options:focus {
+    box-shadow: 0px 0px 10px #ffd800;
+    border: 1.9px solid #ffd800;
+}
+
+
+.List__Options{
+    display: flex;
+    z-index: 10;
+    font-size: 13px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    padding: 0.5rem;
+    color:  #E2E2E2;
+    outline: none;
+    margin-top: 0.2rem;
+    transition: 0.4s;
+    
+  };
+
+
+
+  /*Scroll de lasopciones*/
+  .filter__container__Main{
+    width: 250px;
+  }
+  .filter__container__Main__Arcodion{
+    width: 250px;
+    overflow-y: scroll !important;
+    height: 60vh;
+  }
+  
+
+
+ 

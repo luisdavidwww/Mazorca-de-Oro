@@ -1,0 +1,1374 @@
+[
+    {
+      "id": 1,
+      "ciudad": "Puerto Ayacucho",
+      "abreviatura": "PAA",
+      "estado_id": 1
+    },
+    {
+      "id": 2,
+      "ciudad": "La Esmeralda",
+      "abreviatura": "LES",
+      "estado_id": 1
+    },
+    {
+      "id": 3,
+      "ciudad": "San Fernando de Atabapo",
+      "abreviatura": "SFA",
+      "estado_id": 1
+    },
+    {
+      "id": 4,
+      "ciudad": "Maroa",
+      "abreviatura": "MAR",
+      "estado_id": 1
+    },
+    {
+      "id": 5,
+      "ciudad": "Puerto Carreño",
+      "abreviatura": "PCN",
+      "estado_id": 1
+    },
+    {
+      "id": 6,
+      "ciudad": "San Carlos de Río Negro",
+      "abreviatura": "SCR",
+      "estado_id": 1
+    },
+    {
+      "id": 7,
+      "ciudad": "San Juan de Manapiare",
+      "abreviatura": "SJU",
+      "estado_id": 1
+    },
+    {
+      "id": 8,
+      "ciudad": "Isla Ratoncito",
+      "abreviatura": "ISR",
+      "estado_id": 1
+    },
+    {
+      "id": 9,
+      "ciudad": "San Fernando de Atabapo",
+      "abreviatura": "SFA",
+      "estado_id": 1
+    },
+    {
+      "id": 10,
+      "ciudad": "Boca de Mawá",
+      "abreviatura": "BOM",
+      "estado_id": 1
+    },
+    {
+      "id": 11,
+      "ciudad": "Barcelona",
+      "abreviatura": "BAR",
+      "estado_id": 2
+    },
+    {
+      "id": 12,
+      "ciudad": "Puerto La Cruz",
+      "abreviatura": "PLC",
+      "estado_id": 2
+    },
+    {
+      "id": 13,
+      "ciudad": "Lechería",
+      "abreviatura": "LEC",
+      "estado_id": 2
+    },
+    {
+      "id": 14,
+      "ciudad": "El Tigre",
+      "abreviatura": "ETI",
+      "estado_id": 2
+    },
+    {
+      "id": 15,
+      "ciudad": "Anaco",
+      "abreviatura": "ANA",
+      "estado_id": 2
+    },
+    {
+      "id": 16,
+      "ciudad": "Cantaura",
+      "abreviatura": "CAN",
+      "estado_id": 2
+    },
+    {
+      "id": 17,
+      "ciudad": "Guanta",
+      "abreviatura": "GUA",
+      "estado_id": 2
+    },
+    {
+      "id": 18,
+      "ciudad": "Clarines",
+      "abreviatura": "CLA",
+      "estado_id": 2
+    },
+    {
+      "id": 19,
+      "ciudad": "San Tomé",
+      "abreviatura": "STO",
+      "estado_id": 2
+    },
+    {
+      "id": 20,
+      "ciudad": "San Mateo",
+      "abreviatura": "SMA",
+      "estado_id": 2
+    },
+    {
+      "id": 21,
+      "ciudad": "San Fernando",
+      "abreviatura": "SFA",
+      "estado_id": 3
+    },
+    {
+      "id": 22,
+      "ciudad": "Guasdualito",
+      "abreviatura": "GUA",
+      "estado_id": 3
+    },
+    {
+      "id": 23,
+      "ciudad": "Biruaca",
+      "abreviatura": "BIR",
+      "estado_id": 3
+    },
+    {
+      "id": 24,
+      "ciudad": "Achaguas",
+      "abreviatura": "ACH",
+      "estado_id": 3
+    },
+    {
+      "id": 25,
+      "ciudad": "El Nula",
+      "abreviatura": "ENU",
+      "estado_id": 3
+    },
+    {
+      "id": 26,
+      "ciudad": "Bruzual",
+      "abreviatura": "BRU",
+      "estado_id": 3
+    },
+    {
+      "id": 27,
+      "ciudad": "Elorza",
+      "abreviatura": "ELO",
+      "estado_id": 3
+    },
+
+        {
+          "id": 28,
+          "ciudad": "Mantecal",
+          "abreviatura": "MAN",
+          "estado_id": 3
+        },
+        {
+          "id": 29,
+          "ciudad": "San Juan de Payara",
+          "abreviatura": "SJP",
+          "estado_id": 3
+        },
+        {
+          "id": 30,
+          "ciudad": "Pedro Camejo",
+          "abreviatura": "PCJ",
+          "estado_id": 3
+        },
+        {
+          "id": 31,
+          "ciudad": "Maracay",
+          "abreviatura": "MAR",
+          "estado_id": 4
+        },
+        {
+          "id": 32,
+          "ciudad": "La Victoria",
+          "abreviatura": "LAV",
+          "estado_id": 4
+        },
+        {
+          "id": 33,
+          "ciudad": "Cagua",
+          "abreviatura": "CAG",
+          "estado_id": 4
+        },
+        {
+          "id": 34,
+          "ciudad": "Turmero",
+          "abreviatura": "TUR",
+          "estado_id": 4
+        },
+        {
+          "id": 35,
+          "ciudad": "El Limón",
+          "abreviatura": "ELI",
+          "estado_id": 4
+        },
+        {
+          "id": 36,
+          "ciudad": "Villa de Cura",
+          "abreviatura": "VDC",
+          "estado_id": 4
+        },
+        {
+          "id": 37,
+          "ciudad": "Palo Negro",
+          "abreviatura": "PAL",
+          "estado_id": 4
+        },
+        {
+          "id": 38,
+          "ciudad": "Santa Rita",
+          "abreviatura": "SRI",
+          "estado_id": 4
+        },
+        {
+          "id": 39,
+          "ciudad": "Las Tejerías",
+          "abreviatura": "LTE",
+          "estado_id": 4
+        },
+        {
+          "id": 40,
+          "ciudad": "San Sebastián",
+          "abreviatura": "SSA",
+          "estado_id": 4
+        },
+        {
+          "id": 41,
+          "ciudad": "Barinas",
+          "abreviatura": "BNS",
+          "estado_id": 5
+        },
+        {
+          "id": 42,
+          "ciudad": "Barinitas",
+          "abreviatura": "BNT",
+          "estado_id": 5
+        },
+        {
+          "id": 43,
+          "ciudad": "Barinas",
+          "abreviatura": "BNS",
+          "estado_id": 5
+        },
+        {
+          "id": 44,
+          "ciudad": "Sabaneta",
+          "abreviatura": "SBN",
+          "estado_id": 5
+        },
+        {
+          "id": 45,
+          "ciudad": "Ciudad Bolivia",
+          "abreviatura": "CBO",
+          "estado_id": 5
+        },
+        {
+          "id": 46,
+          "ciudad": "Socopó",
+          "abreviatura": "SOP",
+          "estado_id": 5
+        },
+        {
+          "id": 47,
+          "ciudad": "Santa Bárbara",
+          "abreviatura": "STB",
+          "estado_id": 5
+        },
+        {
+          "id": 48,
+          "ciudad": "Barinas",
+          "abreviatura": "BNS",
+          "estado_id": 5
+        },
+        {
+          "id": 49,
+          "ciudad": "Ciudad Guayana",
+          "abreviatura": "CGU",
+          "estado_id": 6
+        },
+        {
+          "id": 50,
+          "ciudad": "Puerto Ordaz",
+          "abreviatura": "POZ",
+          "estado_id": 6
+        },
+        {
+          "id": 51,
+          "ciudad": "Ciudad Bolívar",
+          "abreviatura": "CBO",
+          "estado_id": 6
+        },
+        {
+          "id": 52,
+          "ciudad": "Upata",
+          "abreviatura": "UPA",
+          "estado_id": 6
+        },
+        {
+          "id": 53,
+          "ciudad": "San Félix",
+          "abreviatura": "SFX",
+          "estado_id": 6
+        },
+        {
+          "id": 54,
+          "ciudad": "El Callao",
+          "abreviatura": "ECA",
+          "estado_id": 6
+        },
+        {
+          "id": 55,
+          "ciudad": "Santa Elena de Uairén",
+          "abreviatura": "SEU",
+          "estado_id": 6
+        },
+        {
+          "id": 56,
+          "ciudad": "Caicara del Orinoco",
+          "abreviatura": "CDO",
+          "estado_id": 6
+        },
+        {
+          "id": 57,
+          "ciudad": "Tumeremo",
+          "abreviatura": "TUM",
+          "estado_id": 6
+        },
+        {
+          "id": 58,
+          "ciudad": "Ciudad Piar",
+          "abreviatura": "CPI",
+          "estado_id": 6
+        },
+        {
+          "id": 59,
+          "ciudad": "Valencia",
+          "abreviatura": "VAL",
+          "estado_id": 7
+        },
+        {
+          "id": 60,
+          "ciudad": "Puerto Cabello",
+          "abreviatura": "PCO",
+          "estado_id": 7
+        },
+        {
+          "id": 61,
+          "ciudad": "Naguanagua",
+          "abreviatura": "NAG",
+          "estado_id": 7
+        },
+        {
+          "id": 62,
+          "ciudad": "Guacara",
+          "abreviatura": "GUA",
+          "estado_id": 7
+        },
+        {
+          "id": 63,
+          "ciudad": "San Diego",
+          "abreviatura": "SDI",
+          "estado_id": 7
+        },
+        {
+          "id": 64,
+          "ciudad": "Los Guayos",
+          "abreviatura": "LGO",
+          "estado_id": 7
+        },
+        {
+          "id": 65,
+          "ciudad": "Juan José Mora",
+          "abreviatura": "JJM",
+          "estado_id": 7
+        },
+        {
+          "id": 66,
+          "ciudad": "Tinaquillo",
+          "abreviatura": "TIN",
+          "estado_id": 7
+        },
+        {
+          "id": 67,
+          "ciudad": "Bejuma",
+          "abreviatura": "BEJ",
+          "estado_id": 7
+        },
+
+            {
+              "id": 68,
+              "ciudad": "Guigue",
+              "abreviatura": "GUI",
+              "estado_id": 7
+            },
+            {
+              "id": 69,
+              "ciudad": "San Carlos",
+              "abreviatura": "SCO",
+              "estado_id": 8
+            },
+            {
+              "id": 70,
+              "ciudad": "Tinaquillo",
+              "abreviatura": "TIN",
+              "estado_id": 8
+            },
+            {
+              "id": 71,
+              "ciudad": "El Baúl",
+              "abreviatura": "EBA",
+              "estado_id": 8
+            },
+            {
+              "id": 72,
+              "ciudad": "Lagunillas",
+              "abreviatura": "LAG",
+              "estado_id": 8
+            },
+            {
+              "id": 73,
+              "ciudad": "El Pao",
+              "abreviatura": "EPA",
+              "estado_id": 8
+            },
+            {
+              "id": 74,
+              "ciudad": "Libertad",
+              "abreviatura": "LIB",
+              "estado_id": 8
+            },
+            {
+              "id": 75,
+              "ciudad": "Tinaco",
+              "abreviatura": "TAC",
+              "estado_id": 8
+            },
+            {
+              "id": 76,
+              "ciudad": "San Fernando",
+              "abreviatura": "SFA",
+              "estado_id": 8
+            },
+            {
+              "id": 77,
+              "ciudad": "Macapo",
+              "abreviatura": "MAC",
+              "estado_id": 8
+            },
+            {
+              "id": 78,
+              "ciudad": "Cazorla",
+              "abreviatura": "CAZ",
+              "estado_id": 8
+            },
+            {
+              "id": 79,
+              "ciudad": "Tucupita",
+              "abreviatura": "TUC",
+              "estado_id": 9
+            },
+            {
+              "id": 80,
+              "ciudad": "Curiapo",
+              "abreviatura": "CUR",
+              "estado_id": 9
+            },
+            {
+              "id": 81,
+              "ciudad": "San José de Amacuro",
+              "abreviatura": "SJA",
+              "estado_id": 9
+            },
+            {
+              "id": 82,
+              "ciudad": "Pedernales",
+              "abreviatura": "PED",
+              "estado_id": 9
+            },
+            {
+              "id": 83,
+              "ciudad": "La Horqueta",
+              "abreviatura": "LHO",
+              "estado_id": 9
+            },
+            {
+              "id": 84,
+              "ciudad": "Mantequero",
+              "abreviatura": "MAN",
+              "estado_id": 9
+            },
+            {
+              "id": 85,
+              "ciudad": "Casacoima",
+              "abreviatura": "CAS",
+              "estado_id": 9
+            },
+            {
+              "id": 86,
+              "ciudad": "La Urbana",
+              "abreviatura": "LUR",
+              "estado_id": 9
+            },
+            {
+              "id": 87,
+              "ciudad": "Tucupita",
+              "abreviatura": "TUC",
+              "estado_id": 9
+            },
+            {
+              "id": 88,
+              "ciudad": "La Isla",
+              "abreviatura": "LIS",
+              "estado_id": 9
+            },
+            {
+              "id": 89,
+              "ciudad": "Coro",
+              "abreviatura": "COR",
+              "estado_id": 10
+            },
+            {
+              "id": 90,
+              "ciudad": "Punto Fijo",
+              "abreviatura": "PFI",
+              "estado_id": 10
+            },
+            {
+              "id": 91,
+              "ciudad": "Churuguara",
+              "abreviatura": "CHU",
+              "estado_id": 10
+            },
+            {
+              "id": 92,
+              "ciudad": "Tucacas",
+              "abreviatura": "TUC",
+              "estado_id": 10
+            },
+            {
+              "id": 93,
+              "ciudad": "La Vela de Coro",
+              "abreviatura": "LVC",
+              "estado_id": 10
+            },
+            {
+              "id": 94,
+              "ciudad": "Dabajuro",
+              "abreviatura": "DAJ",
+              "estado_id": 10
+            },
+            {
+              "id": 95,
+              "ciudad": "San Juan de los Cayos",
+              "abreviatura": "SJC",
+              "estado_id": 10
+            },
+            {
+              "id": 96,
+              "ciudad": "Judibana",
+              "abreviatura": "JUD",
+              "estado_id": 10
+            },
+            {
+              "id": 97,
+              "ciudad": "Puerto Cumarebo",
+              "abreviatura": "PCU",
+              "estado_id": 10
+            },
+            {
+              "id": 98,
+              "ciudad": "Santa Ana",
+              "abreviatura": "SAA",
+              "estado_id": 10
+            },
+            {
+              "id": 99,
+              "ciudad": "San Juan de Los Morros",
+              "abreviatura": "SJL",
+              "estado_id": 11
+            },
+            {
+              "id": 100,
+              "ciudad": "Calabozo",
+              "abreviatura": "CAL",
+              "estado_id": 11
+            },
+            {
+              "id": 101,
+              "ciudad": "Valle de La Pascua",
+              "abreviatura": "VLP",
+              "estado_id": 11
+            },
+            {
+              "id": 102,
+              "ciudad": "San Juan de Los Morros",
+              "abreviatura": "SJL",
+              "estado_id": 11
+            },
+            {
+              "id": 103,
+              "ciudad": "San José de Guaribe",
+              "abreviatura": "SJG",
+              "estado_id": 11
+            },
+            {
+              "id": 104,
+              "ciudad": "Camaguán",
+              "abreviatura": "CAM",
+              "estado_id": 11
+            },
+            {
+              "id": 105,
+              "ciudad": "Altagracia de Orituco",
+              "abreviatura": "ALO",
+              "estado_id": 11
+            },
+            {
+              "id": 106,
+              "ciudad": "Ortiz",
+              "abreviatura": "ORT",
+              "estado_id": 11
+            },
+            {
+              "id": 107,
+              "ciudad": "San Fernando de Apure",
+              "abreviatura": "SFA",
+              "estado_id": 11
+            },
+            {
+                "id": 108,
+                "ciudad": "Zaraza",
+                "abreviatura": "ZAR",
+                "estado_id": 11
+              },
+              {
+                "id": 109,
+                "ciudad": "Barquisimeto",
+                "abreviatura": "BRQ",
+                "estado_id": 12
+              },
+              {
+                "id": 110,
+                "ciudad": "Cabudare",
+                "abreviatura": "CAB",
+                "estado_id": 12
+              },
+              {
+                "id": 111,
+                "ciudad": "Quíbor",
+                "abreviatura": "QUI",
+                "estado_id": 12
+              },
+              {
+                "id": 112,
+                "ciudad": "Carora",
+                "abreviatura": "CAR",
+                "estado_id": 12
+              },
+              {
+                "id": 113,
+                "ciudad": "El Tocuyo",
+                "abreviatura": "ETO",
+                "estado_id": 12
+              },
+              {
+                "id": 114,
+                "ciudad": "Sarare",
+                "abreviatura": "SAR",
+                "estado_id": 12
+              },
+              {
+                "id": 115,
+                "ciudad": "Duaca",
+                "abreviatura": "DUA",
+                "estado_id": 12
+              },
+              {
+                "id": 116,
+                "ciudad": "Acarigua",
+                "abreviatura": "ACA",
+                "estado_id": 12
+              },
+              {
+                "id": 117,
+                "ciudad": "Araure",
+                "abreviatura": "ARA",
+                "estado_id": 12
+              },
+              {
+                "id": 118,
+                "ciudad": "Sanare",
+                "abreviatura": "SAN",
+                "estado_id": 12
+              },
+              {
+                "id": 119,
+                "ciudad": "Mérida",
+                "abreviatura": "MER",
+                "estado_id": 13
+              },
+              {
+                "id": 120,
+                "ciudad": "Ejido",
+                "abreviatura": "EJI",
+                "estado_id": 13
+              },
+              {
+                "id": 121,
+                "ciudad": "Tovar",
+                "abreviatura": "TOV",
+                "estado_id": 13
+              },
+              {
+                "id": 122,
+                "ciudad": "La Azulita",
+                "abreviatura": "LAZ",
+                "estado_id": 13
+              },
+              {
+                "id": 123,
+                "ciudad": "Lagunillas",
+                "abreviatura": "LAG",
+                "estado_id": 13
+              },
+              {
+                "id": 124,
+                "ciudad": "Mucuchíes",
+                "abreviatura": "MUC",
+                "estado_id": 13
+              },
+              {
+                "id": 125,
+                "ciudad": "Timotes",
+                "abreviatura": "TIM",
+                "estado_id": 13
+              },
+              {
+                "id": 126,
+                "ciudad": "Santa Cruz de Mora",
+                "abreviatura": "SCM",
+                "estado_id": 13
+              },
+              {
+                "id": 127,
+                "ciudad": "El Vigía",
+                "abreviatura": "EVI",
+                "estado_id": 13
+              },
+              {
+                "id": 128,
+                "ciudad": "Mérida",
+                "abreviatura": "MER",
+                "estado_id": 13
+              },
+              {
+                "id": 129,
+                "ciudad": "Caracas",
+                "abreviatura": "CCS",
+                "estado_id": 14
+              },
+              {
+                "id": 130,
+                "ciudad": "Los Teques",
+                "abreviatura": "LTS",
+                "estado_id": 14
+              },
+              {
+                "id": 131,
+                "ciudad": "Petare",
+                "abreviatura": "PET",
+                "estado_id": 14
+              },
+              {
+                "id": 132,
+                "ciudad": "Guarenas",
+                "abreviatura": "GNS",
+                "estado_id": 14
+              },
+              {
+                "id": 133,
+                "ciudad": "Guatire",
+                "abreviatura": "GTE",
+                "estado_id": 14
+              },
+              {
+                "id": 134,
+                "ciudad": "Ocumare del Tuy",
+                "abreviatura": "ODT",
+                "estado_id": 14
+              },
+              {
+                "id": 135,
+                "ciudad": "Charallave",
+                "abreviatura": "CHA",
+                "estado_id": 14
+              },
+              {
+                "id": 136,
+                "ciudad": "Cúa",
+                "abreviatura": "CUA",
+                "estado_id": 14
+              },
+              {
+                "id": 137,
+                "ciudad": "Santa Teresa del Tuy",
+                "abreviatura": "STD",
+                "estado_id": 14
+              },
+              {
+                "id": 138,
+                "ciudad": "Baruta",
+                "abreviatura": "BAR",
+                "estado_id": 14
+              },
+              {
+                "id": 139,
+                "ciudad": "Maturín",
+                "abreviatura": "MTN",
+                "estado_id": 15
+              },
+              {
+                "id": 140,
+                "ciudad": "Punta de Mata",
+                "abreviatura": "PDM",
+                "estado_id": 15
+              },
+              {
+                "id": 141,
+                "ciudad": "Caripito",
+                "abreviatura": "CPT",
+                "estado_id": 15
+              },
+              {
+                "id": 142,
+                "ciudad": "Aragua de Maturín",
+                "abreviatura": "ADM",
+                "estado_id": 15
+              },
+              {
+                "id": 143,
+                "ciudad": "Barrancas del Orinoco",
+                "abreviatura": "BOR",
+                "estado_id": 15
+              },
+              {
+                "id": 144,
+                "ciudad": "Temblador",
+                "abreviatura": "TEM",
+                "estado_id": 15
+              },
+              {
+                "id": 145,
+                "ciudad": "Quiriquire",
+                "abreviatura": "QUI",
+                "estado_id": 15
+              },
+              {
+                "id": 146,
+                "ciudad": "Caripe",
+                "abreviatura": "CAR",
+                "estado_id": 15
+              },
+              {
+                "id": 147,
+                "ciudad": "Aguasay",
+                "abreviatura": "AGU",
+                "estado_id": 15
+              },
+              {
+                "id": 148,
+                "ciudad": "Santa Bárbara",
+                "abreviatura": "STB",
+                "estado_id": 15
+              },
+              {
+                "id": 149,
+                "ciudad": "Porlamar",
+                "abreviatura": "POR",
+                "estado_id": 16
+              },
+              {
+                "id": 150,
+                "ciudad": "La Asunción",
+                "abreviatura": "LAS",
+                "estado_id": 16
+              },
+              {
+                "id": 151,
+                "ciudad": "Pampatar",
+                "abreviatura": "PAM",
+                "estado_id": 16
+              },
+              {
+                "id": 152,
+                "ciudad": "Juan Griego",
+                "abreviatura": "JGR",
+                "estado_id": 16
+              },
+              {
+                "id": 153,
+                "ciudad": "San Juan Bautista",
+                "abreviatura": "SJB",
+                "estado_id": 16
+              },
+              {
+                "id": 154,
+                "ciudad": "Santa Ana",
+                "abreviatura": "STA",
+                "estado_id": 16
+              },
+              {
+                "id": 155,
+                "ciudad": "Los Robles",
+                "abreviatura": "LRO",
+                "estado_id": 16
+              },
+              {
+                "id": 156,
+                "ciudad": "San Antonio del Norte",
+                "abreviatura": "SAN",
+                "estado_id": 16
+              },
+              {
+                "id": 157,
+                "ciudad": "El Valle del Espíritu Santo",
+                "abreviatura": "EVE",
+                "estado_id": 16
+              },
+              {
+                "id": 158,
+                "ciudad": "San Pedro de Coche",
+                "abreviatura": "SPC",
+                "estado_id": 16
+              },
+              {
+                "id": 159,
+                "ciudad": "Guanare",
+                "abreviatura": "GUA",
+                "estado_id": 17
+              },
+              {
+                "id": 160,
+                "ciudad": "Acarigua",
+                "abreviatura": "ACA",
+                "estado_id": 17
+              },
+              {
+                "id": 161,
+                "ciudad": "Araure",
+                "abreviatura": "ARA",
+                "estado_id": 17
+              },
+              {
+                "id": 162,
+                "ciudad": "Guanarito",
+                "abreviatura": "GTO",
+                "estado_id": 17
+              },
+              {
+                "id": 163,
+                "ciudad": "Píritu",
+                "abreviatura": "PRI",
+                "estado_id": 17
+              },
+              {
+                "id": 164,
+                "ciudad": "Agua Blanca",
+                "abreviatura": "ABL",
+                "estado_id": 17
+              },
+              {
+                "id": 165,
+                "ciudad": "Biscucuy",
+                "abreviatura": "BIS",
+                "estado_id": 17
+              },
+              {
+                "id": 166,
+                "ciudad": "Papelón",
+                "abreviatura": "PAP",
+                "estado_id": 17
+              },
+              {
+                "id": 167,
+                "ciudad": "Villa Bruzual",
+                "abreviatura": "VBR",
+                "estado_id": 17
+              },
+              {
+                "id": 168,
+                "ciudad": "Santa Rosalía",
+                "abreviatura": "SRO",
+                "estado_id": 17
+              },
+              {
+                "id": 169,
+                "ciudad": "Cumaná",
+                "abreviatura": "CUM",
+                "estado_id": 18
+              },
+              {
+                "id": 170,
+                "ciudad": "Carúpano",
+                "abreviatura": "CAR",
+                "estado_id": 18
+              },
+              {
+                "id": 171,
+                "ciudad": "Cariaco",
+                "abreviatura": "CRC",
+                "estado_id": 18
+              },
+              {
+                "id": 172,
+                "ciudad": "Araya",
+                "abreviatura": "ARA",
+                "estado_id": 18
+              },
+              {
+                "id": 173,
+                "ciudad": "Río Caribe",
+                "abreviatura": "RCB",
+                "estado_id": 18
+              },
+              {
+                "id": 174,
+                "ciudad": "Tunapuy",
+                "abreviatura": "TUN",
+                "estado_id": 18
+              },
+              {
+                "id": 175,
+                "ciudad": "Casanay",
+                "abreviatura": "CAS",
+                "estado_id": 18
+              },
+              {
+                "id": 176,
+                "ciudad": "San Antonio del Golfo",
+                "abreviatura": "SAG",
+                "estado_id": 18
+              },
+              {
+                "id": 177,
+                "ciudad": "Santa Fe",
+                "abreviatura": "STF",
+                "estado_id": 18
+              },
+              {
+                "id": 178,
+                "ciudad": "Irapa",
+                "abreviatura": "IRA",
+                "estado_id": 18
+              },
+              {
+                "id": 179,
+                "ciudad": "San Cristóbal",
+                "abreviatura": "SCT",
+                "estado_id": 19
+              },
+              {
+                "id": 180,
+                "ciudad": "Cordero",
+                "abreviatura": "COR",
+                "estado_id": 19
+              },
+              {
+                "id": 181,
+                "ciudad": "Rubio",
+                "abreviatura": "RUB",
+                "estado_id": 19
+              },
+              {
+                "id": 182,
+                "ciudad": "La Grita",
+                "abreviatura": "LGT",
+                "estado_id": 19
+              },
+              {
+                "id": 183,
+                "ciudad": "San Antonio del Táchira",
+                "abreviatura": "SAT",
+                "estado_id": 19
+              },
+              {
+                "id": 184,
+                "ciudad": "Palmira",
+                "abreviatura": "PAL",
+                "estado_id": 19
+              },
+              {
+                "id": 185,
+                "ciudad": "Abejales",
+                "abreviatura": "ABE",
+                "estado_id": 19
+              },
+              {
+                "id": 186,
+                "ciudad": "Tariba",
+                "abreviatura": "TAR",
+                "estado_id": 19
+              },
+              {
+                "id": 187,
+                "ciudad": "Coloncito",
+                "abreviatura": "COL",
+                "estado_id": 19
+              },
+              {
+                "id": 188,
+                "ciudad": "San Juan de Colón",
+                "abreviatura": "SJC",
+                "estado_id": 19
+              },
+              {
+                "id": 189,
+                "ciudad": "Valera",
+                "abreviatura": "VAL",
+                "estado_id": 20
+              },
+              {
+                "id": 190,
+                "ciudad": "Trujillo",
+                "abreviatura": "TRU",
+                "estado_id": 20
+              },
+              {
+                "id": 191,
+                "ciudad": "Boconó",
+                "abreviatura": "BOC",
+                "estado_id": 20
+              },
+              {
+                "id": 192,
+                "ciudad": "La Puerta",
+                "abreviatura": "LPT",
+                "estado_id": 20
+              },
+              {
+                "id": 193,
+                "ciudad": "Carache",
+                "abreviatura": "CAR",
+                "estado_id": 20
+              },
+              {
+                "id": 194,
+                "ciudad": "Sabana de Mendoza",
+                "abreviatura": "SAB",
+                "estado_id": 20
+              },
+              {
+                "id": 195,
+                "ciudad": "Betijoque",
+                "abreviatura": "BTJ",
+                "estado_id": 20
+              },
+              {
+                "id": 196,
+                "ciudad": "Santa Ana",
+                "abreviatura": "STA",
+                "estado_id": 20
+              },
+              {
+                "id": 197,
+                "ciudad": "Pampanito",
+                "abreviatura": "PAM",
+                "estado_id": 20
+              },
+              {
+                "id": 198,
+                "ciudad": "Valmore Rodríguez",
+                "abreviatura": "VRO",
+                "estado_id": 20
+              },
+              {
+                "id": 199,
+                "ciudad": "La Guaira",
+                "abreviatura": "LGV",
+                "estado_id": 21
+              },
+              {
+                "id": 200,
+                "ciudad": "Macuto",
+                "abreviatura": "MAC",
+                "estado_id": 21
+              },
+              {
+                "id": 201,
+                "ciudad": "Naiguatá",
+                "abreviatura": "NAI",
+                "estado_id": 21
+              },
+              {
+                "id": 202,
+                "ciudad": "Caraballeda",
+                "abreviatura": "CAR",
+                "estado_id": 21
+              },
+              {
+                "id": 203,
+                "ciudad": "Catia La Mar",
+                "abreviatura": "CLM",
+                "estado_id": 21
+              },
+              {
+                "id": 204,
+                "ciudad": "Carayaca",
+                "abreviatura": "CAR",
+                "estado_id": 21
+              },
+              {
+                "id": 205,
+                "ciudad": "La Sabana",
+                "abreviatura": "LSA",
+                "estado_id": 21
+              },
+              {
+                "id": 206,
+                "ciudad": "Maiquetía",
+                "abreviatura": "MAI",
+                "estado_id": 21
+              },
+              {
+                "id": 207,
+                "ciudad": "Caruao",
+                "abreviatura": "CAU",
+                "estado_id": 21
+              },
+              {
+                "id": 208,
+                "ciudad": "Camurí Grande",
+                "abreviatura": "CAM",
+                "estado_id": 21
+              },
+              {
+                "id": 209,
+                "ciudad": "San Felipe",
+                "abreviatura": "SFE",
+                "estado_id": 22
+              },
+              {
+                "id": 210,
+                "ciudad": "Nirgua",
+                "abreviatura": "NIR",
+                "estado_id": 22
+              },
+              {
+                "id": 211,
+                "ciudad": "Yaritagua",
+                "abreviatura": "YAR",
+                "estado_id": 22
+              },
+              {
+                "id": 212,
+                "ciudad": "Chivacoa",
+                "abreviatura": "CHI",
+                "estado_id": 22
+              },
+              {
+                "id": 213,
+                "ciudad": "Urachiche",
+                "abreviatura": "URA",
+                "estado_id": 22
+              },
+              {
+                "id": 214,
+                "ciudad": "Aroa",
+                "abreviatura": "ARO",
+                "estado_id": 22
+              },
+              {
+                "id": 215,
+                "ciudad": "Cocorote",
+                "abreviatura": "COC",
+                "estado_id": 22
+              },
+              {
+                "id": 216,
+                "ciudad": "Albarico",
+                "abreviatura": "ALB",
+                "estado_id": 22
+              },
+              {
+                "id": 217,
+                "ciudad": "Sabana de Parra",
+                "abreviatura": "SAP",
+                "estado_id": 22
+              },
+              {
+                "id": 218,
+                "ciudad": "Boraure",
+                "abreviatura": "BOR",
+                "estado_id": 22
+              },
+              {
+                "id": 219,
+                "ciudad": "Maracaibo",
+                "abreviatura": "MAR",
+                "estado_id": 23
+              },
+              {
+                "id": 220,
+                "ciudad": "Cabimas",
+                "abreviatura": "CAB",
+                "estado_id": 23
+              },
+              {
+                "id": 221,
+                "ciudad": "Ciudad Ojeda",
+                "abreviatura": "COJ",
+                "estado_id": 23
+              },
+              {
+                "id": 222,
+                "ciudad": "San Francisco",
+                "abreviatura": "SFR",
+                "estado_id": 23
+              },
+              {
+                "id": 223,
+                "ciudad": "Machiques",
+                "abreviatura": "MAC",
+                "estado_id": 23
+              },
+              {
+                "id": 224,
+                "ciudad": "Lagunillas",
+                "abreviatura": "LAG",
+                "estado_id": 23
+              },
+              {
+                "id": 225,
+                "ciudad": "Santa Rita",
+                "abreviatura": "SAR",
+                "estado_id": 23
+              },
+              {
+                "id": 226,
+                "ciudad": "Bachaquero",
+                "abreviatura": "BAC",
+                "estado_id": 23
+              },
+              {
+                "id": 227,
+                "ciudad": "Los Puertos de Altagracia",
+                "abreviatura": "LPA",
+                "estado_id": 23
+              },
+              {
+                "id": 228,
+                "ciudad": "La Villa del Rosario",
+                "abreviatura": "LVR",
+                "estado_id": 24
+              }
+
+  ]
+  

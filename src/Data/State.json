@@ -1,0 +1,141 @@
+[
+    {
+      "id": 1,
+      "estado": "Amazonas",
+      "abreviatura": "AM",
+      "activo": 1
+    },
+    {
+      "id": 2,
+      "estado": "Anzoátegui",
+      "abreviatura": "AN",
+      "activo": 1
+    },
+    {
+      "id": 3,
+      "estado": "Apure",
+      "abreviatura": "AP",
+      "activo": 1
+    },
+    {
+      "id": 4,
+      "estado": "Aragua",
+      "abreviatura": "AR",
+      "activo": 1
+    },
+    {
+      "id": 5,
+      "estado": "Barinas",
+      "abreviatura": "BA",
+      "activo": 1
+    },
+    {
+      "id": 6,
+      "estado": "Bolívar",
+      "abreviatura": "BO",
+      "activo": 1
+    },
+    {
+      "id": 7,
+      "estado": "Carabobo",
+      "abreviatura": "CA",
+      "activo": 1
+    },
+    {
+      "id": 8,
+      "estado": "Cojedes",
+      "abreviatura": "CO",
+      "activo": 1
+    },
+    {
+      "id": 9,
+      "estado": "Delta Amacuro",
+      "abreviatura": "DA",
+      "activo": 1
+    },
+    {
+      "id": 10,
+      "estado": "Falcón",
+      "abreviatura": "FA",
+      "activo": 1
+    },
+    {
+      "id": 11,
+      "estado": "Guárico",
+      "abreviatura": "GU",
+      "activo": 1
+    },
+    {
+      "id": 12,
+      "estado": "Lara",
+      "abreviatura": "LA",
+      "activo": 1
+    },
+    {
+      "id": 13,
+      "estado": "Mérida",
+      "abreviatura": "ME",
+      "activo": 1
+    },
+    {
+      "id": 14,
+      "estado": "Miranda",
+      "abreviatura": "MI",
+      "activo": 1
+    },
+    {
+      "id": 15,
+      "estado": "Monagas",
+      "abreviatura": "MO",
+      "activo": 1
+    },
+    {
+      "id": 16,
+      "estado": "Nueva Esparta",
+      "abreviatura": "NE",
+      "activo": 1
+    },
+    {
+      "id": 17,
+      "estado": "Portuguesa",
+      "abreviatura": "PO",
+      "activo": 1
+    },
+    {
+      "id": 18,
+      "estado": "Sucre",
+      "abreviatura": "SU",
+      "activo": 1
+    },
+    {
+      "id": 19,
+      "estado": "Táchira",
+      "abreviatura": "TA",
+      "activo": 1
+    },
+    {
+      "id": 20,
+      "estado": "Trujillo",
+      "abreviatura": "TR",
+      "activo": 1
+    },
+    {
+      "id": 21,
+      "estado": "Vargas",
+      "abreviatura": "DC",
+      "activo": 1
+    },
+    {
+      "id": 22,
+      "estado": "Yaracuy",
+      "abreviatura": "YR",
+      "activo": 1
+    },
+    {
+      "id": 23,
+      "estado": "Zulia",
+      "abreviatura": "ZU",
+      "activo": 1
+    }
+  ]
+  
