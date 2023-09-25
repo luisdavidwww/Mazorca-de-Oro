@@ -3,10 +3,11 @@ import { useForm } from '../../hooks/useForm.tsx';
 
 //Componentes
 import DropdownOptions from './Dropdown/DropdownOptions.jsx';
-import DropdownPhone from './DropdownPhone.jsx';
+import DropdownCity from './Dropdown/DropdownCity.jsx';
 
 //Data
 import State from '../../Data/State.json';
+import City from '../../Data/City.json';
 
 //Estilos
 import './InscriptionForm.css';
@@ -138,14 +139,12 @@ function InscriptionForm() {
             />
           </div>
 
-          
-
           {/* Estado */}
           <div className='Container__Label-Email'>
             <label htmlFor='fullName' className='Label__Form'>
               Estado
             </label>
-            <DropdownOptions Data={ State }/>
+            <DropdownOptions Data={ State } DataCity={ City }/>
           </div>
 
           {/* Ciudad */}
@@ -153,21 +152,25 @@ function InscriptionForm() {
             <label htmlFor='fullName' className='Label__Form'>
               Ciudad
             </label>
-            <DropdownPhone Data={ ProductosICL }/>
+            <DropdownCity Data={ City } List={ "City" } />
           </div>
 
-
-
-
-          {/* Productos Bayer */}
+          {/* Dirección */}
           <div className='Container__Label-Email'>
-            <label htmlFor='fullName' className='Label__Form'>
-              Productos Bayer Utilizados
+            <label htmlFor='name' className='Label__Form'>
+              Dirección
             </label>
-            <DropdownPhone Data={ ProductosBayer }/>
+            <input
+              type='text'
+              className='Input__Form'
+              id='name'
+              placeholder='Ingrese su Dirección'
+              value={name}
+              autoComplete='off'
+              onChange={(e) => onChange(e.target.value, 'name','letters')}
+              
+            />
           </div>
-
-          
 
 
            {/* Carga de archivo con estilo */}

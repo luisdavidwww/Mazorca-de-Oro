@@ -1,15 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import DropdownCityTwo from './DropdownCityTwo.jsx';
-//Data
-import City from '../../../Data/City.json';
-//Estilos
 import './DropdownOptions.css';
 
-const DropdownOptions = ({ Data, DataCIty }) => {
+const DropdownCity = ({ Data }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const [filterText, setFilterText] = useState('');
-  const [selectedId, setSelectedId] = useState(null);
 
   // Constante Auxiliar
   const refOne = useRef(undefined);
@@ -24,23 +19,19 @@ const DropdownOptions = ({ Data, DataCIty }) => {
     }
   };
 
-  const handleOptionClick = (abreviatura, id ) => {
+  const handleOptionClick = (abreviatura) => {
     setSelectedOption(abreviatura);
-    setSelectedId(id);
     setIsOpen(false);
   };
-
-
-  const filteredData = Data.filter((item) =>
-    item.estado.toLowerCase().includes(filterText.toLowerCase())
-  )
 
   useEffect(() => {
     document.addEventListener('click', handleclickOutside, true);
   }, []);
 
-
-  
+  const filteredData = Data.filter((item) =>
+    item.ciudad.toLowerCase().includes(filterText.toLowerCase())
+  //item.estado.toLowerCase().includes(filterText.toLowerCase())
+  )
 
   return (
     <div className="container_Dropdown_Options" ref={refOne}>
@@ -65,18 +56,17 @@ const DropdownOptions = ({ Data, DataCIty }) => {
             {filteredData.map((item, index) => (
               <div
                 key={index}
-                onClick={() => handleOptionClick(item.abreviatura, item.id)}
+                onClick={() => handleOptionClick(item.abreviatura)}
                 className="List__Options"
               >
-                { item.estado }
+                { item.ciudad }
               </div>
             ))}
           </ul>
         </div>
       ) : null}
-      <DropdownCityTwo Data={ City } IdState={ selectedId } />
     </div>
   );
 };
 
-export default DropdownOptions;
+export default DropdownCity;

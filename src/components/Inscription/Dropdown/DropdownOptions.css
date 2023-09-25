@@ -41,9 +41,9 @@ body .container__Options_Scroll {
     margin-top: 3.6rem;
     width: 500px;
     color:  #E2E2E2;
-    background-color: #acc0d4;
+    background-color: #161718;
     overflow-y: scroll !important;
-    height: 10vh;
+    height: 25vh;
   }
   
   
@@ -102,6 +102,35 @@ body .container__Options_Scroll {
     overflow-y: scroll !important;
     height: 60vh;
   }
+
+
+  .Input__Form-Search{
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    padding: 1.0rem;
+    color:  #E2E2E2;
+    background-color: #1d1e20cb;
+    border: solid 1.9px #424242;
+    outline: none;
+    width: 100%;
+    border-radius: 2px;
+    margin-top: 0.5rem;
+}
+
+.dropdown-options{
+  display: flex;
+  flex-direction: column;
+}
+
+.container__Input__Search{
+  display: flex;
+  width: 400px;
+  margin-bottom: 1rem;
+}
   
 
 
