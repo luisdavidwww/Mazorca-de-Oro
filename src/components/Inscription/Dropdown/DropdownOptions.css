@@ -44,6 +44,7 @@ body .container__Options_Scroll {
     background-color: #161718;
     overflow-y: scroll !important;
     height: 35vh;
+    padding-bottom: 1rem;
   }
   
   

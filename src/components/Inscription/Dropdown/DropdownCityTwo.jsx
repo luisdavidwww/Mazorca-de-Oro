@@ -19,14 +19,18 @@ const DropdownCity = ({ Data, IdState }) => {
     }
   };
 
-  const handleOptionClick = (abreviatura) => {
-    setSelectedOption(abreviatura);
+  const handleOptionClick = (ciudad) => {
+    setSelectedOption(ciudad);
     setIsOpen(false);
   };
 
   useEffect(() => {
     document.addEventListener('click', handleclickOutside, true);
   }, []);
+
+  useEffect(() => {
+    setSelectedOption(null)
+  }, [IdState]);
 
   const filteredData = Data.filter((item) =>
   (IdState === null || item.estado_id === IdState ) &&
@@ -57,7 +61,7 @@ const DropdownCity = ({ Data, IdState }) => {
             {filteredData.map((item, index) => (
               <div
                 key={index}
-                onClick={() => handleOptionClick(item.abreviatura)}
+                onClick={() => handleOptionClick(item.ciudad)}
                 className="List__Options"
               >
                 { item.ciudad }

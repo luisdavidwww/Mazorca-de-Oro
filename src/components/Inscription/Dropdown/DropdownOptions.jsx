@@ -24,8 +24,8 @@ const DropdownOptions = ({ Data, DataCIty }) => {
     }
   };
 
-  const handleOptionClick = (abreviatura, id ) => {
-    setSelectedOption(abreviatura);
+  const handleOptionClick = (estado, id ) => {
+    setSelectedOption(estado);
     setSelectedId(id);
     setIsOpen(false);
   };
@@ -65,7 +65,7 @@ const DropdownOptions = ({ Data, DataCIty }) => {
             {filteredData.map((item, index) => (
               <div
                 key={index}
-                onClick={() => handleOptionClick(item.abreviatura, item.id)}
+                onClick={() => handleOptionClick(item.estado, item.id)}
                 className="List__Options"
               >
                 { item.estado }
