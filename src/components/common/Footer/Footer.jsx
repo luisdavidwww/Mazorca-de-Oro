@@ -35,17 +35,17 @@ const Footer = () => {
                     <div className="footer__info__products"> 
                         <ul className="footer__info__products__list" >
                             <li className='footer__info__products__item'>
-                                <a href='/Category/Agroindustrial'>
+                                <a href='/'>
                                     <span className='footer__span'>Inicio</span>
                                 </a> 
                             </li>
                             <li className='footer__info__products__item'>
-                                <a href='/Category/Maquinarias'>    
+                                <a href='/inscripcion'>    
                                     <span className='footer__span' >Inscripción</span>
                                 </a> 
                             </li>
                             <li className='footer__info__products__item'>
-                                <a href='/Category/Salud Animal'>    
+                                <a href='/detalles'>    
                                     <span className='footer__span' >Detalles</span>
                                 </a> 
                             </li>

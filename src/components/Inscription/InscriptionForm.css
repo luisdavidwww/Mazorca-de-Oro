@@ -1,6 +1,6 @@
 .Inscripction-container {
-    background-image: url('../../static/images/home/home.jpg');
-    background-color: rgba(0,0,0,0.6);
+    background-image: url('../../static/images/home/incripcion.jpg');
+    background-color: rgba(0,0,0,0.75);
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: darken;
@@ -11,13 +11,15 @@
     justify-content: center;
     align-items: center;
     font-family: 'PT Sans', sans-serif;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
   }
   
 
   .Titulo-Principal-Inscripcion{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Rubik', sans-serif;
     color: #fff;
-    font-size: 70px;
+    font-size: 48px;
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: center;

@@ -17,14 +17,16 @@ function HomeComponent() {
       <div className='header-btns'>
 
         
-        {/* */}
+
         <a href='/inscripcion' className='btn-link'>
           <button className='btn-Incripción-Home'
               >Participar
           </button>
         </a>
 
+
       </div>
+      <p className='Participa-Concurso'>¡PARTICIPA YA POR UN <span style={{color:'#fbff1d'}}>VIAJE A MÉXICO! </span></p>
     </div>  
   </>
   );

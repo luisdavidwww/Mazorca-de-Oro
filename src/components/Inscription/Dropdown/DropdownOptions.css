@@ -43,7 +43,7 @@ body .container__Options_Scroll {
     color:  #E2E2E2;
     background-color: #161718;
     overflow-y: scroll !important;
-    height: 25vh;
+    height: 35vh;
   }
   
   
@@ -119,6 +119,13 @@ body .container__Options_Scroll {
     width: 100%;
     border-radius: 2px;
     margin-top: 0.5rem;
+    transition: 0.4s;
+}
+
+.Input__Form-Search:focus{
+  display: flex;
+  border: solid 1.9px #c7c7c7;
+  transition: 0.4s;
 }
 
 .dropdown-options{

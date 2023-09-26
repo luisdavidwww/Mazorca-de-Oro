@@ -59,7 +59,7 @@ function InscriptionForm() {
           {/* Cedula */}
           <div className='Container__Label-Email'>
             <label htmlFor='fullName' className='Label__Form'>
-              Documento ID
+              Cedula ID
             </label>
             <input
               type='text'
@@ -81,7 +81,7 @@ function InscriptionForm() {
               type='text'
               className='Input__Form'
               id='name'
-              placeholder='Ingrese su nombre completo'
+              placeholder='Ingrese su Nombre Completo'
               value={name}
               autoComplete='off'
               onChange={(e) => onChange(e.target.value, 'name','letters')}
@@ -98,7 +98,7 @@ function InscriptionForm() {
               type='text'
               className='Input__Form'
               id='lastName'
-              placeholder='Ingrese su nombre completo'
+              placeholder='Ingrese sus Apellidos'
               value={lastName}
               autoComplete='off'
               onChange={(e) => onChange(e.target.value, 'lastName', 'letters')}
@@ -115,7 +115,7 @@ function InscriptionForm() {
               type='email'
               className='Input__Form'
               id='email'
-              placeholder='Ingrese su correo electrónico'
+              placeholder='Correo electrónico'
               value={email}
               autoComplete='off'
               onChange={(e) => onChange(e.target.value, 'email', 'emailValidator')}
@@ -131,7 +131,7 @@ function InscriptionForm() {
               type='tel'
               className='Input__Form'
               id='telefono'
-              placeholder='Ingrese su nombre completo'
+              placeholder='Teléfono'
               value={telefono} 
               autoComplete='off'
               onChange={(e) => onChange(e.target.value, 'telefono', 'number' )}
@@ -139,20 +139,12 @@ function InscriptionForm() {
             />
           </div>
 
-          {/* Estado */}
+          {/* Estado Y Ciudad */}
           <div className='Container__Label-Email'>
             <label htmlFor='fullName' className='Label__Form'>
               Estado
             </label>
             <DropdownOptions Data={ State } DataCity={ City }/>
-          </div>
-
-          {/* Ciudad */}
-          <div className='Container__Label-Email'>
-            <label htmlFor='fullName' className='Label__Form'>
-              Ciudad
-            </label>
-            <DropdownCity Data={ City } List={ "City" } />
           </div>
 
           {/* Dirección */}

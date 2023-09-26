@@ -89,7 +89,6 @@ function Navbar() {
             </Link>
           </li>
 
-
           <li
             className='nav-item'
             onMouseEnter={onMouseEnter}
@@ -104,7 +103,6 @@ function Navbar() {
             </Link>
           </li>
 
-
           <li className='nav-item'>
             <a
               href="/financing"
@@ -118,7 +116,6 @@ function Navbar() {
           <li className='nav-item'>
             <button className='btn-Incripción' >Participa Ahora</button>
           </li>
-        
           
         </ul>
 
