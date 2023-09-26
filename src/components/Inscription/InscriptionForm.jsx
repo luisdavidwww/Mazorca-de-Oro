@@ -3,7 +3,6 @@ import { useForm } from '../../hooks/useForm.tsx';
 
 //Componentes
 import DropdownOptions from './Dropdown/DropdownOptions.jsx';
-import DropdownCity from './Dropdown/DropdownCity.jsx';
 
 //Data
 import State from '../../Data/State.json';
@@ -22,8 +21,6 @@ function InscriptionForm() {
     direccion:''
   });
 
-  const ProductosBayer = ["Adengo", "Audax", "Roundup", "Decis", "Larvin", "Alsystin"];
-  const ProductosICL = ["Improver Max", "Kellus Zinc", "Tonus", "Profol Exclusive", "Concorde", "Transklok"];
 
   const [selectedFile, setSelectedFile] = useState(null);
 
@@ -33,20 +30,17 @@ function InscriptionForm() {
   };
 
 
-  
-
-
-
-
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Aquí puedes manejar la carga del archivo (imagen o video) usando 'selectedFile'.
-    // Puedes enviarlo a tu servidor o realizar otras acciones según tus necesidades.
-
+    console.log('Cedula:', CustBillID);
+    console.log('Nombres:', name);
+    console.log('Apellidos:', lastName);
     console.log('Email:', email);
-    console.log('Password:', password);
-    console.log('Selected File:', selectedFile);
+    console.log('Telefono:', telefono);
+    console.log('Direccion:', direccion);
+    console.log('Video:', selectedFile);
+
   };
 
   return (
@@ -173,7 +167,7 @@ function InscriptionForm() {
             <label htmlFor='file' className='Label__Form'>
               <div className='FileUpload'>
                 <div className='UploadIcon'>
-                  <i className='upload-icon' /> {/* Reemplaza 'upload-icon' con tu clase de ícono */}
+                  <i className='upload-icon' /> 
                 </div>
                 <div className='UploadText'>Cargar Archivo</div>
               </div>
@@ -181,9 +175,9 @@ function InscriptionForm() {
             <input
               type='file'
               id='file'
-              accept='image/*, video/*'
+              accept='video/*' // Solo permite archivos de vídeo
               onChange={handleFileChange}
-              style={{ display: 'none' }} // Ocultar el campo de entrada real
+              style={{ display: 'none' }} 
             />
           </div>
 
