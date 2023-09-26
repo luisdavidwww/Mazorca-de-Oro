@@ -12,7 +12,7 @@
     align-items: center;
     font-family: 'PT Sans', sans-serif;
     padding-top: 5rem;
-    padding-bottom: 3rem;
+    padding-bottom: 7rem;
   }
   
 
@@ -287,3 +287,66 @@
   input[type="file"] {
     display: none; /* Oculta el campo de entrada real */
   }
+
+  .container-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .btn-form{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 2px;
+    text-decoration-line: none;
+    outline: none;
+    border: 2px solid  #ffd800;
+    background-color: #ffd800;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 10px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #242222;
+    transition: all 0.3s ease-out;
+  }
+
+  .btn-form:hover{
+    display: inline-block;
+    border: 2px solid  #fbff1d;
+    background-color: #fbff1d;
+    color: #242222;
+    transition: all 0.3s ease-out;
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .Titulo-Principal-Inscripcion{
+      width: 70%;
+      line-height: 60px;
+    }
+  
+    .Inscripction-container {
+      padding-top: 3rem;
+      padding-bottom: 5rem;
+      width: 100%;
+    }
+
+    .Container__Label-Email{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 2rem;
+      width: 100%;
+  }
+  .Container__Label-Dropbox{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.5rem;
+    width: 350px;  
+  }
+    
+  
+  }
+  

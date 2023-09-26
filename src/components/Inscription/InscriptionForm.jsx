@@ -13,12 +13,13 @@ import City from '../../Data/City.json';
 import './InscriptionForm.css';
 
 function InscriptionForm() {
-  const { CustBillID, name, lastName, email, password, telefono, onChange } = useForm({
+  const { CustBillID, name, lastName, email, password, telefono, direccion, onChange } = useForm({
     CustBillID: '',
     name: '',
     lastName:'',
     email: '',
-    telefono: ''
+    telefono: '',
+    direccion:''
   });
 
   const ProductosBayer = ["Adengo", "Audax", "Roundup", "Decis", "Larvin", "Alsystin"];
@@ -149,18 +150,17 @@ function InscriptionForm() {
 
           {/* Dirección */}
           <div className='Container__Label-Email'>
-            <label htmlFor='name' className='Label__Form'>
+            <label htmlFor='direccion' className='Label__Form'>
               Dirección
             </label>
             <input
               type='text'
               className='Input__Form'
-              id='name'
+              id='direccion'
               placeholder='Ingrese su Dirección'
-              value={name}
+              value={direccion}
               autoComplete='off'
-              onChange={(e) => onChange(e.target.value, 'name','letters')}
-              
+              onChange={(e) => onChange(e.target.value, 'direccion','letters')}
             />
           </div>
 
@@ -186,6 +186,15 @@ function InscriptionForm() {
               style={{ display: 'none' }} // Ocultar el campo de entrada real
             />
           </div>
+
+          {/* Boton */}
+          <div className='container-btn'>
+              <button className='btn-form' type="button" >
+                Enviar
+              </button>
+          </div>
+
+
         </form>
       </div>
     </>

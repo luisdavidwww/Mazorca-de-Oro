@@ -142,4 +142,38 @@ body .container__Options_Scroll {
   
 
 
- 
+@media screen and (max-width: 768px) {
+
+  body .container__Options_Scroll {
+    display: flex;
+    position: absolute;
+    margin-top: 3.6rem;
+    width: 350px;
+    color:  #E2E2E2;
+    background-color: #161718;
+    overflow-y: scroll !important;
+    height: 35vh;
+    padding-bottom: 1rem;
+  }
+
+  .Input__Form-Search{
+    width: 245px !important;
+}
+
+
+  .List__Options{
+    display: flex;
+    width: 200px
+  };
+  
+  
+  .container_Dropdown_Options
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+  
+
+}

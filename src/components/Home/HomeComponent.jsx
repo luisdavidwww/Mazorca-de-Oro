@@ -19,9 +19,9 @@ function HomeComponent() {
         
 
         <a href='/inscripcion' className='btn-link'>
-          <button className='btn-Incripción-Home'
+          <div className='btn-Incripción-Home'
               >Participar
-          </button>
+          </div>
         </a>
 
 
