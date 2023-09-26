@@ -1,5 +1,8 @@
 import React from 'react';
-import  mazorcaPNG   from "../../static/images/home/Mazorca-Dorado.png";
+
+//Imagenes
+import  mazorcaPNG   from "../../static/images/home/Mazorca-Oro.png";
+//Estilos
 import './Home.css';
 
 function HomeComponent() {
@@ -7,15 +10,16 @@ function HomeComponent() {
   <>  
     <div className='header-container'>
       <p className='name-Concurso'>CONCURSO</p>
-      <h1 className='Titulo-Principal'>MAZORCA</h1>
-      <h1 className='Titulo-Principal' style={{color:"#ffd800"}}>DE ORO</h1>
-
+      <div className='img-Container'>
+        <img src={ mazorcaPNG } alt="MazorcaDEOro" className='img-Home' />
+      </div>
+      
       <div className='header-btns'>
 
         
         {/* */}
-        <a href='/products' className='btn-link'>
-          <button className='btn-outline'
+        <a href='/inscripcion' className='btn-link'>
+          <button className='btn-Incripción-Home'
               >Participar
           </button>
         </a>

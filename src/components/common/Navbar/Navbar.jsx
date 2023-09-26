@@ -1,10 +1,16 @@
 import React, { useState, useEffect  } from 'react';
-//import { Button } from './Button';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
-import Dropdown from '../Dropdown/Dropdown';
-import  LogoMazorcaOro   from "../../../static/Mazorca-Oro.svg";
 
+//Estilos
+import './Navbar.css';
+
+//imagenes
+import  LogoMazorcaOroPNG   from "../../../static/Mazorca-Oro-02.png";
+import  LogoMazorcaOroTwo from "../../../static/images/Navbar/Mazorca-Oro-two.png";
+import  LogoMazorcaOroOne  from "../../../static/images/Navbar/Mazorca-Oro-One.png";
+
+//Componentes
+import Dropdown from '../Dropdown/Dropdown';
 
 
 
@@ -33,7 +39,6 @@ function Navbar() {
   }, []);
 
 
-  
   window.addEventListener('resize',  refreshPage);
 
 
@@ -56,14 +61,13 @@ function Navbar() {
 
 
 
-
   return (
     <>
       <nav className='navbar'>
         <a href='/' className='navbar-logo' onClick={closeMobileMenu}>
         {
-          LogoMazorcaOro != null ? 
-            (<img src={ LogoMazorcaOro } width={"140px"} height={"140px"} alt="Casagri" />
+          LogoMazorcaOroOne != null ? 
+            (<img src={ LogoMazorcaOroOne } width={"150PX"} height={"65PX"} alt="Casagri" />
                ):null
         } 
          
@@ -76,9 +80,13 @@ function Navbar() {
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
 
           <li className='nav-item'>
-            <a href='/' className='nav-links' onClick={closeMobileMenu}>
-              Inicio
-            </a>
+            <Link
+              to='/'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+              Inicio 
+            </Link>
           </li>
 
 
@@ -94,7 +102,6 @@ function Navbar() {
             >
               Inscripción <i className='fas fa-caret-down' />
             </Link>
-            {/*dropdown && <Dropdown />*/}
           </li>
 
 

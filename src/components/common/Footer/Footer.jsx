@@ -1,18 +1,12 @@
 import React from 'react';
 
-//Logo casagri
-import LogoCasagri from "../../../static/casagri-logo-footer.png";
+//Logo Footer 
+import  mazorcaPNG   from "../../../static/images/footer/Mazorca-Oro.png";
+import  MazorcaOne   from "../../../static/images/footer/Mazorca-Oro-One.png";
 
 //icons
-import { AiFillPhone } from "react-icons/ai";
-import { MdEmail } from "react-icons/md";
-import { MdLocationOn } from "react-icons/md";
-//social Icons  
-import { FaFacebookF } from "react-icons/fa";
-import { BsInstagram } from "react-icons/bs";
-import { BsYoutube } from "react-icons/bs";
-import { BsTwitter } from "react-icons/bs";
-import { BsLinkedin } from "react-icons/bs";
+import { AiFillContacts } from "react-icons/ai";
+
 
 
 //estilos
@@ -29,28 +23,9 @@ const Footer = () => {
                 <div className="footer__Logo" >
                         <a href='/'>
                             <div className='footer__logo__img' >
-                                <img src={ LogoCasagri } alt="Casagri" />
+                                <img src={ MazorcaOne }  alt="Mazorca-de-Oro" />
                             </div> 
                         </a> 
-
-                        {/*Social icons */}
-                        <div className='footer__logo__IconsSocial'>
-                            <a href='/' target='_blank' aria-label='Facebook'>
-                                    <FaFacebookF className='footer__logo__IconsSocial__item'/>
-                            </a>
-                            <a href='https://instagram.com/casagri.ve?igshid=NmQ2ZmYxZjA=' target='_blank' aria-label='Instagram'>
-                                    <BsInstagram className='footer__logo__IconsSocial__item'/>
-                            </a>
-                            <a href='/' target='_blank' aria-label='Youtube'>
-                                    <BsYoutube className='footer__logo__IconsSocial__item'/>
-                            </a>
-                            <a href='/' target='_blank' aria-label='Twitter'>
-                                    <BsTwitter className='footer__logo__IconsSocial__item'/>
-                            </a>
-                            <a href='/' target='_blank' aria-label='LinkedIn'>
-                                    <BsLinkedin className='footer__logo__IconsSocial__item'/>
-                            </a>
-                        </div>
                 </div>
 
                 {/* Footer */}
@@ -61,28 +36,21 @@ const Footer = () => {
                         <ul className="footer__info__products__list" >
                             <li className='footer__info__products__item'>
                                 <a href='/Category/Agroindustrial'>
-                                    <span className='footer__span'>Agroindustrial</span>
+                                    <span className='footer__span'>Inicio</span>
                                 </a> 
                             </li>
                             <li className='footer__info__products__item'>
                                 <a href='/Category/Maquinarias'>    
-                                    <span className='footer__span' >Maquinaria</span>
+                                    <span className='footer__span' >Inscripción</span>
                                 </a> 
                             </li>
                             <li className='footer__info__products__item'>
                                 <a href='/Category/Salud Animal'>    
-                                    <span className='footer__span' >Salud Animal</span>
+                                    <span className='footer__span' >Detalles</span>
                                 </a> 
                             </li>
-                            <li className='footer__info__products__item'>
-                                <a href='/Category/Ferretería'>
-                                    <span className='footer__span'>Ferretería</span>
-                                </a> 
-                            </li>
-                            <li className='footer__info__products__item'>
-                                <a href='/Category/Salud Pública'>
-                                    <span className='footer__span' >Salud Pública</span> 
-                                </a> 
+                            <li className='footer__info__products__item-btn'>
+                                <button className='btn-Incripción-footer' >Participa Ahora</button>
                             </li>
                         </ul>
                     </div>
@@ -92,38 +60,17 @@ const Footer = () => {
                         <div className='footer__info__contact__list'>
                             <div className='footer__info__contact__item'>
                                 <div className='footer__info__contact__iconText'>
-                                    <AiFillPhone className='footer__icon__contact'/>
-                                    <span className='footer__contact__span' >0501- CASAGRI (2272474) 54654</span>
-                                </div>
-                                <div className='footer__info__contact__iconTextbtn'>
-                                    <MdEmail className='footer__icon__contact'/>
-                                    <span className='footer__contact__span'>mercadeo@casagri-group.com</span>
+                                    <AiFillContacts className='footer__icon__info'/>
+                                    <span className='footer__contact__span' >Más Información: 0501- CASAGRI (2272474) 54654</span>
                                 </div>
                             </div> 
-                        </div>
-                        <div className='footer__info__contact__list'>
-                            <div className='footer__info__contact__item'>
-                                <div className='footer__info__contact__iconText'>
-                                    <MdLocationOn className='footer__icon__contact'/>
-                                    <span className='footer__contact__span'>Barquisimeto, Venezuela. Av. Libertador entre calles 17 y 18 Zona Industrial I</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='footer__info__contact__listbtn'>
-                            <div className='footer__info__contact__item'>
-                                <a href='/contact' className=''>
-                                    <button className='footer__btn__outline main-green'>
-                                        Contactar
-                                    </button>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* Copyright Casagri */}
-            <div className="text-center text-Copy">Casagri © 2023 - All Rights Reserved</div>
+            <div className="text-center text-Copy">Concuso Mazorca de Oro © 2023 - All Rights Reserved</div>
             
         </footer>
     )
