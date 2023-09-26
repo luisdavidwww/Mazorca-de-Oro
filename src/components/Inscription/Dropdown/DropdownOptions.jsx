@@ -5,7 +5,7 @@ import City from '../../../Data/City.json';
 //Estilos
 import './DropdownOptions.css';
 
-const DropdownOptions = ({ Data, DataCIty }) => {
+const DropdownOptions = ({ Data, ChangeState, ChangeCity }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const [filterText, setFilterText] = useState('');
@@ -26,6 +26,8 @@ const DropdownOptions = ({ Data, DataCIty }) => {
 
   const handleOptionClick = (estado, id ) => {
     setSelectedOption(estado);
+    //Aqui va cambiando el estado a elegir
+    ChangeState(estado);
     setSelectedId(id);
     setIsOpen(false);
   };
@@ -79,7 +81,7 @@ const DropdownOptions = ({ Data, DataCIty }) => {
             <label htmlFor='fullName' className='Label__Form'>
               Ciudad
             </label>
-            <DropdownCityTwo Data={ City } IdState={ selectedId } />
+            <DropdownCityTwo Data={ City } IdState={ selectedId } ChangeCity={ ChangeCity }/>
         </div>
 
       

@@ -4,10 +4,8 @@ import { Link } from 'react-router-dom';
 //Estilos
 import './Navbar.css';
 
-//imagenes
-import  LogoMazorcaOroPNG   from "../../../static/Mazorca-Oro-02.png";
-import  LogoMazorcaOroTwo from "../../../static/images/Navbar/Mazorca-Oro-two.png";
-import  LogoMazorcaOroOne  from "../../../static/images/Navbar/Mazorca-Oro-One.png";
+//imagenes Mazorca-Oro
+import  MazorcaOro  from "../../../static/images/Navbar/Mazorca-Oro.svg";
 
 //Componentes
 import Dropdown from '../Dropdown/Dropdown';
@@ -66,11 +64,10 @@ function Navbar() {
       <nav className='navbar'>
         <a href='/' className='navbar-logo' onClick={closeMobileMenu}>
         {
-          LogoMazorcaOroOne != null ? 
-            (<img src={ LogoMazorcaOroOne } width={"150PX"} height={"65PX"} alt="Casagri" />
+          MazorcaOro != null ? 
+            (<img src={ MazorcaOro } width={"140px"} height={"48px"} alt="Casagri" />
                ):null
-        } 
-         
+        }    
         </a>
 
 
@@ -99,7 +96,7 @@ function Navbar() {
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Inscripción <i className='fas fa-caret-down' />
+              Inscripción {/*<i className='fas fa-caret-down' />*/}
             </Link>
           </li>
 

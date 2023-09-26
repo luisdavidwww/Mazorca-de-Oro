@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './DropdownOptions.css';
 
-const DropdownCity = ({ Data, IdState }) => {
+const DropdownCity = ({ Data, IdState, ChangeCity }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const [filterText, setFilterText] = useState('');
@@ -21,6 +21,7 @@ const DropdownCity = ({ Data, IdState }) => {
 
   const handleOptionClick = (ciudad) => {
     setSelectedOption(ciudad);
+    ChangeCity(ciudad);
     setIsOpen(false);
   };
 
@@ -29,7 +30,8 @@ const DropdownCity = ({ Data, IdState }) => {
   }, []);
 
   useEffect(() => {
-    setSelectedOption(null)
+    setSelectedOption(null);
+    ChangeCity(null);
   }, [IdState]);
 
   const filteredData = Data.filter((item) =>

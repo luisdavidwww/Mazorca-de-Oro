@@ -1,8 +1,7 @@
 import React from 'react';
 
 //Logo Footer 
-import  mazorcaPNG   from "../../../static/images/footer/Mazorca-Oro.png";
-import  MazorcaOne   from "../../../static/images/footer/Mazorca-Oro-One.png";
+import  MazorcaOro   from "../../../static/images/Navbar/Mazorca-Oro.svg";
 
 //icons
 import { AiFillContacts } from "react-icons/ai";
@@ -23,7 +22,7 @@ const Footer = () => {
                 <div className="footer__Logo" >
                         <a href='/'>
                             <div className='footer__logo__img' >
-                                <img src={ MazorcaOne }  alt="Mazorca-de-Oro" />
+                                <img src={ MazorcaOro }  alt="Mazorca-de-Oro" />
                             </div> 
                         </a> 
                 </div>

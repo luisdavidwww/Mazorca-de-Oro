@@ -165,6 +165,7 @@ li a{
     color: #ffd800;
     margin-top: 0.1rem;
 }
+
 .footer__contact__span{
     display: flex;
     width: 200px;
@@ -176,6 +177,8 @@ li a{
 }
 .footer__contact__span:hover{
     cursor: pointer;
+    color: #ffd800;
+    transition: all 0.3s ease-out;
 }
 
 /*Estilo boton footer*/
@@ -227,8 +230,8 @@ li a{
     border-radius: 2px;
     text-decoration-line: none;
     outline: none;
-    border: 2px solid  #ffd800;
-    background-color: #ffd800;
+    border: 2px solid  #ffffff;
+    background-color: #ffffff;
     border-radius: 50px;
     cursor: pointer;
     margin: 0px;
@@ -241,8 +244,8 @@ li a{
   
   .btn-Incripción-footer:hover{
     display: inline-block;
-    border: 2px solid  #fbff1d;
-    background-color: #fbff1d;
+    border: 2px solid  #ffd800;
+    background-color: #ffd800;
     color: #242222;
     transition: all 0.3s ease-out;
   }
