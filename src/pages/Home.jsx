@@ -1,19 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import HomeComponent from "../components/Home/HomeComponent"
+import React, { useEffect } from 'react';
+//componentes
+import HomeComponent from "../components/Home/HomeComponent";
+import Participate from "../components/Home/Participate"
+import Video from "../components/Home/Video"
 
 export const Home = () => {
-
-
-  
 
   useEffect(() => {
     document.title= `Concurso Mazorca de Oro`;
   },[])
 
   return (
-    <div >
+    <>
       <HomeComponent/>
-    </div>
+      <div style={{ backgroundColor:'#070400'}}>
+        <Participate/>
+        <Video/>
+      </div>
+      
+    </>
   )
 }
 

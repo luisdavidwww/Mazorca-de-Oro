@@ -7,8 +7,6 @@ import './Navbar.css';
 //imagenes Mazorca-Oro
 import  MazorcaOro  from "../../../static/images/Navbar/Mazorca-Oro.svg";
 
-//Componentes
-import Dropdown from '../Dropdown/Dropdown';
 
 
 
@@ -20,6 +18,8 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
+  
+  {/* Ver el boton del Navbar Menu en Versión Movil*/}
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
@@ -28,16 +28,13 @@ function Navbar() {
     }
   };
 
-  function refreshPage() {
-    window.location.reload(false);
-  }
+
 
   useEffect(() => {
     showButton();
   }, []);
 
 
-  window.addEventListener('resize',  refreshPage);
 
 
   const onMouseEnter = () => {
@@ -62,6 +59,7 @@ function Navbar() {
   return (
     <>
       <nav className='navbar'>
+        {/* Logo Mazorca de Oro */}
         <a href='/' className='navbar-logo' onClick={closeMobileMenu}>
         {
           MazorcaOro != null ? 
@@ -70,12 +68,14 @@ function Navbar() {
         }    
         </a>
 
-
+        {/* Icono Menu Version Movil */}
         <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
 
+        {/* Navbar */}
+        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+          {/* Inicio */}
           <li className='nav-item'>
             <Link
               to='/'
@@ -85,7 +85,7 @@ function Navbar() {
               Inicio 
             </Link>
           </li>
-
+          {/* Inscripcion */}
           <li
             className='nav-item'
             onMouseEnter={onMouseEnter}
@@ -96,26 +96,24 @@ function Navbar() {
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Inscripción {/*<i className='fas fa-caret-down' />*/}
+              Inscripción
             </Link>
           </li>
-
+          {/* Detalles */}
           <li className='nav-item'>
             <a
-              href="/financing"
+              href="/detalles"
               className='nav-links'
               onClick={closeMobileMenu}
             >
               Detalles
             </a>
           </li>
-
+          {/* Participa Ahora */}
           <li className='nav-item'>
             <button className='btn-Incripción' >Participa Ahora</button>
           </li>
-          
         </ul>
-
       </nav>
     </>
   );

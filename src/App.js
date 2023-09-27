@@ -1,7 +1,5 @@
 import React from "react";
 import { AppRouter } from './routers/AppRouter';
-
-
 import "./App.css"
 
 
@@ -15,5 +13,7 @@ function App() {
 }
 
 export default App;
+
+
 
 

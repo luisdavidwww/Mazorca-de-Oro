@@ -78,9 +78,11 @@ const DropdownOptions = ({ Data, ChangeState, ChangeCity }) => {
       ) : null}
 
         <div className='Container__Label-Email'>
-            <label htmlFor='fullName' className='Label__Form'>
+          
+            <div  className='Label__Form'>
               Ciudad
-            </label>
+            </div>
+
             <DropdownCityTwo Data={ City } IdState={ selectedId } ChangeCity={ ChangeCity }/>
         </div>
 

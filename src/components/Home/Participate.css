@@ -1,0 +1,73 @@
+.AboutUs__main{
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    /*background: #170b04;*/
+  }
+
+  .AboutUs__title__Container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+
+
+  .AboutUs__text__Container{
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    margin: auto;
+    padding-bottom: 2rem;
+  }
+
+  .text__aboutUs{
+    text-justify: auto;
+    text-align: center;
+    width: 400px;
+    font-size: 16px;
+    line-height: 23px;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(255, 255, 255);
+  }
+
+
+  .luis{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
+  }
+  .david{
+    overflow: "hidden";
+    display: -webkit-box;
+    text-overflow: "ellipsis";
+    line-clamp: "2";
+    -moz-box-orient: "vertical" ;
+    width: 200px;
+    height: 100%;
+  }
+
+
+  
+
+  @media screen and (max-width: 960px) {
+
+    .AboutUs__text__Container{
+      display: flex;
+      justify-content: center;
+      width: 85%;
+      margin: auto;
+    }
+
+    .text__aboutUs{
+      font-size: 15px;
+      line-height: 26px;
+      font-family: "Poppins";
+    }
+    
+
+  }

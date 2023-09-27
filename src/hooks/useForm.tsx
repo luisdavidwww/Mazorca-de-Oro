@@ -13,12 +13,27 @@ export const useForm = <T extends Object>( initState: T ) => {
         
     }
 
+    const onChangeNumber = ( value: string, field: keyof T, validationType?: string ) => {
+
+      if (field === 'CustBillID'  && validationType === 'number' && !/^\d*$/.test(value)) {
+        // Validación para números en el campo 'telefono'
+        return;
+      }
+      if (field === 'telefono' && validationType === 'number' && !/^\d*$/.test(value)) {
+        // Validación para números en el campo 'telefono'
+        return;
+      }
+
+      setState({
+          ...state,
+          [field]: value
+      });
+      
+  }
+
     const onChange = (value: string, field: keyof T, validationType?: string) => {
         // Realizar validaciones según el campo y el tipo de validación
-        if (field === 'CustBillID'  && validationType === 'number' && !/^\d*$/.test(value)) {
-            // Validación para números en el campo 'telefono'
-            return;
-          }
+        
 
         if (field === 'name' && validationType === 'letters' && !/^[A-Za-z\s]*$/.test(value)) {
           // Validación para letras y espacios en el campo 'name'
@@ -29,16 +44,8 @@ export const useForm = <T extends Object>( initState: T ) => {
             // Validación para letras y espacios en el campo 'name'
             return;
           }
-    {/* 
-        if (field === 'email' && validationType === 'emailValidator' && /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value)) {
-          // Validación para correo electrónico en el campo 'email'
-          return;
-        }
-    */}
-        if (field === 'telefono' && validationType === 'number' && !/^\d*$/.test(value)) {
-          // Validación para números en el campo 'telefono'
-          return;
-        }
+
+       
 
         // Si no hay validaciones o si pasa las validaciones, actualizar el estado
         setState({
@@ -56,6 +63,7 @@ export const useForm = <T extends Object>( initState: T ) => {
         ...state,
         form: state,
         onChange,
+        onChangeNumber,
         setFormValue
     }
 

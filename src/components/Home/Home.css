@@ -1,11 +1,11 @@
 
   .header-container {
     background-image: url('../../static/images/home/home.jpg');
-    background-color: rgba(0,0,0,0.5);
+    /*background-color: rgba(0,0,0,0.5);*/
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: darken;
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -28,9 +28,18 @@
     height: 350px;
   }
 
+  .img-Home-two
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:700px ;
+    height: 400px;
+  }
+
   .name-Concurso{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
     font-size: 18px !important;
     letter-spacing: 20px;
     padding-left: 1.5rem;
@@ -39,8 +48,8 @@
   .Participa-Concurso{
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
-    font-size: 18px !important;
-    letter-spacing: 1.5px;
+    font-size: 19px !important;
+    letter-spacing: 0.5px;
     color: #ffffff !important;
     width: 100%;
     padding-top: 0rem;
@@ -120,7 +129,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: darken;
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -196,6 +205,15 @@
     justify-content: center;
     align-items: center;
     width: 410px ;
+    height: 180px;
+    padding: 0%;
+  }
+
+  .img-Home-two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 330px ;
     height: 180px;
     padding: 0%;
   }

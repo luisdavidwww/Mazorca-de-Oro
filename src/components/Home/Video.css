@@ -1,0 +1,141 @@
+.CorporatePolicy__container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    /*background: #170b04;*/
+  }
+
+  .cards__items-container {
+    display: inline-flex;
+    margin-bottom: 24px;
+    max-width: 100%;
+    padding: 0px;
+  }
+
+  .Titulo-Principal-video{
+    font-family: 'Rubik', sans-serif;
+    color: #ffd800;
+    font-size: 38px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    line-height: 100px;
+  }
+
+  .cards__item-pc {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin: 0 0.4rem;
+    border-radius: 10px;
+    /*margin-top: 1rem;*/
+    /*margin-bottom: 0rem;*/
+    transition: all .02s ease-in-out;
+  }
+
+
+
+  .cards__item__link-pc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    width: 100%;
+    width: 300px;
+    transition: all 0.5s ease-in-out;
+  }
+
+
+  .cards__item__pic-wrap-pc{
+    margin: 2rem;
+  }
+
+  .cards__item__img-pc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100px;
+    width: 100px;
+  }
+
+  .cards__item__text-pc{
+    color: #489B1E;
+    font-family: "Montserrat";
+    text-align: center;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: -1px;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+  }
+
+  .cards__item__info-pc{
+    /*background-color: rgb(253, 253, 253);*/
+    height: 170px;
+  }
+
+.cards__item__p-two{
+  color: rgb(255, 255, 255);
+  padding-top: 0.4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: center;
+  font-size: 16px;
+  line-height: 23px;
+  font-family: 'Rubik', sans-serif;
+
+}
+ 
+
+
+@media only screen and (max-width: 960px) {
+
+  .cards__items-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .cards__item-pc {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex: 1;
+    margin: 0 0.8rem;
+    border-radius: 10px;
+    transition: all .25s ease-in-out;
+    background: transparent;
+    margin-bottom: 1rem;
+  }
+
+  .cards__item__info-pc{
+    height: 145px;
+    margin-bottom: 1rem;
+  }
+
+
+  .cards__item__text-pc{
+    margin-bottom: 0rem;
+  }
+
+  .Titulo-Principal-video{
+    font-family: 'Rubik', sans-serif;
+    color: #ffd800;
+    font-size: 35px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    line-height: 40px;
+  }
+
+}

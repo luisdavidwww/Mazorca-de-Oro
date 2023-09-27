@@ -14,6 +14,8 @@ import './InscriptionForm.css';
 //icons
 import { BsFillImageFill } from "react-icons/bs";
 
+
+//Función para validar Email
 function isValidEmail(email) {
   // Expresión regular para validar un correo electrónico
   const emailRegex = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
@@ -22,9 +24,11 @@ function isValidEmail(email) {
   return emailRegex.test(email);
 }
 
+
+//Formulario General
 function InscriptionForm() {
 
-  const { CustBillID, name, lastName, email, password, telefono, direccion, onChange } = useForm({
+  const { CustBillID, name, lastName, email, password, telefono, direccion, onChange, onChangeNumber } = useForm({
     CustBillID: '',
     name: '',
     lastName:'',
@@ -52,13 +56,6 @@ function InscriptionForm() {
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     setSelectedFile(file);
-
-    // Actualiza la vista previa del nombre del archivo
-    const fileNamePreview = document.getElementById('file-name-preview');
-    if (fileNamePreview) {
-      fileNamePreview.textContent = file ? file.name : '';
-    }
-
     // Verifica la validez del formulario cuando se cambia el archivo
     checkFormValidity();
   };
@@ -72,9 +69,10 @@ function InscriptionForm() {
     }
   };
 
+  //Metodo para registrarse en el concurso
+  const onRegisterVideo = (e) => {
+    e.preventDefault()
 
-
-  const onRegisterVideo = () => {
     // Variable para rastrear si hay errores
     let hasError = false; 
 
@@ -119,20 +117,21 @@ function InscriptionForm() {
           Inscribete <span style={{ color: '#ffd800' }}>Ahora</span>
         </h1>
 
-        <div >
+        <div>
           {/* Cedula */}
           <div className='Container__Label-Email'>
-            <label htmlFor='fullName' className='Label__Form'>
+            <label htmlFor='CustBillID' className='Label__Form'>
               Cedula ID
             </label>
             <input
-              type='text'
+              type='number'
               className='Input__Form'
               id='CustBillID'
               placeholder='Documento'
               value={CustBillID} 
               autoComplete='off'
-              onChange={(e) => onChange(e.target.value, 'CustBillID', 'number' )}
+              inputMode=''
+              onChange={(e) => onChangeNumber(e.target.value, 'CustBillID', 'number' )}
             />
           </div>
 
@@ -194,26 +193,26 @@ function InscriptionForm() {
 
           {/* Telefono */}
           <div className='Container__Label-Email'>
-            <label htmlFor='fullName' className='Label__Form'>
+            <label for='telefono' className='Label__Form'>
               Teléfono
             </label>
             <input
-              type='tel'
+              type='number'
               className='Input__Form'
               id='telefono'
               placeholder='Teléfono'
               value={telefono} 
               autoComplete='off'
-              onChange={(e) => onChange(e.target.value, 'telefono', 'number' )}
+              onChange={(e) => onChangeNumber(e.target.value, 'telefono', 'number' )}
               
             />
           </div>
 
           {/* Estado Y Ciudad */}
           <div className='Container__Label-Email'>
-            <label htmlFor='fullName' className='Label__Form'>
+            <div className='Label__Form'>
               Estado
-            </label>
+            </div>
             <DropdownOptions Data={ State } ChangeState={ setState } ChangeCity={ setCity }/>
           </div>
 
@@ -233,12 +232,11 @@ function InscriptionForm() {
             />
           </div>
 
-
-           {/* Carga de archivo con estilo */}
-           <div className='Container__Label-Dropbox'>
-           <label htmlFor='email' className='Label__Form'>
+          {/* Carga de archivo con estilo */}
+          <div className='Container__Label-Dropbox'>
+           <div for='video' className='Label__Form'>
               Cargar Video
-            </label>
+            </div>
             <label htmlFor='file' className='Label__Form'>
               <div className='FileUpload'>
                 <div className='UploadIcon'>
@@ -268,8 +266,8 @@ function InscriptionForm() {
           <div className='container-btn'>
             <button
               className={ isFormValid ? 'btn-form' : 'btn-form-inActive' }
-              type="button"
-              onClick={onRegisterVideo}
+              type="submit"
+              onClick={(e) => { onRegisterVideo(e) }}
               disabled={!isFormValid} // Habilita el botón solo si el formulario es válido
             >
               Enviar

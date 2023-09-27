@@ -128,6 +128,10 @@
     border: solid 1.9px #E2E2E2; 
     border-radius: 2px;
     margin-top: 0.5rem;
+    input[type="none" i] {
+      padding-block: 1px;
+      padding-inline: 2px;
+  }
 }
 
 .Input__Form:hover{
