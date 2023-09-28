@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 //componentes
 import Patrocinantes from "./Patrocinantes";
@@ -29,11 +30,11 @@ function HomeComponent() {
       
       {/* Boton de Acción */}
       <div className='header-btns'>
-        <a href='/inscripcion' className='btn-link'>
+        <Link to='/inscripcion' className='btn-link'>
           <div className='btn-Incripción-Home'
               >Participar
           </div>
-        </a>
+        </Link>
       </div>
 
       {/* Premio */}

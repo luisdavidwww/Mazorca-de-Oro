@@ -60,13 +60,13 @@ function Navbar() {
     <>
       <nav className='navbar'>
         {/* Logo Mazorca de Oro */}
-        <a href='/' className='navbar-logo' onClick={closeMobileMenu}>
+        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
         {
           MazorcaOro != null ? 
             (<img src={ MazorcaOro } width={"140px"} height={"48px"} alt="Casagri" />
                ):null
         }    
-        </a>
+        </Link>
 
         {/* Icono Menu Version Movil */}
         <div className='menu-icon' onClick={handleClick}>
@@ -101,13 +101,13 @@ function Navbar() {
           </li>
           {/* Detalles */}
           <li className='nav-item'>
-            <a
-              href="/detalles"
+            <Link
+              to="/detalles"
               className='nav-links'
               onClick={closeMobileMenu}
             >
               Detalles
-            </a>
+            </Link>
           </li>
           {/* Participa Ahora */}
           <li className='nav-item'>

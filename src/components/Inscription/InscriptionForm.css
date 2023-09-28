@@ -114,6 +114,73 @@
     color: rgb(255, 255, 255);
 }
 
+.consejo__text{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  /*text-transform: uppercase;*/
+  padding-top: 0rem;
+  margin-top: 1rem;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: all .25s ease-in-out;
+  color: rgb(255, 255, 255);
+}
+
+.consejo__text__reco{
+  padding-top: 1rem;
+  margin-right: 1rem;
+}
+
+.consejo__text__Link{
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  /*text-transform: uppercase;*/
+  margin-top: 0rem;
+  padding: 0.8rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: all .4s ease-in-out;
+  color: #ffd800;
+  border: 1.9px solid #ffd800;
+  border-radius: 50px;
+}
+
+.consejo__text__Link:hover{
+  transition: all .4s ease-in-out;
+  font-weight: 700;
+  color: #181818;
+  background-color:#ffd800; ;
+  border: 1.9px solid #ffd800;
+  border-radius: 50px;
+}
+
+.consejo__text__Link:focus{
+  transition: all .4s ease-in-out;
+  font-weight: 700;
+  color: #181818;
+  background-color:#ffd800; ;
+  border: 1.9px solid #ffd800;
+  border-radius: 50px;
+}
+
+
+
+
+
 
 .Input__Form{
     display: flex;
@@ -370,6 +437,46 @@
     width: 350px;  
   }
     
+
+
+  .consejo__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .consejo__text__reco{
+    padding-top: 1rem;
+    margin-right: 0rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  
+  .consejo__text__Link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    /*text-transform: uppercase;*/
+    margin-top: 2rem;
+    padding: 0.8rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: all .25s ease-in-out;
+    color: #ffd800;
+    border: 1.9px solid #ffd800;
+    border-radius: 50px;
+    width: 150px;
+  }
   
   }
   

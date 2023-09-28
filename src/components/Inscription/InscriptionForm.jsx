@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from '../../hooks/useForm.tsx';
+import { Link } from 'react-router-dom';
 
 //Componentes
 import DropdownOptions from './Dropdown/DropdownOptions.jsx';
@@ -117,6 +118,10 @@ function InscriptionForm() {
           Inscribete <span style={{ color: '#ffd800' }}>Ahora</span>
         </h1>
 
+        <div className='consejo__text'>
+          <div className='consejo__text__reco'>*Recuerda leer las instrucciones a detalle para cumplir con los requisitos del concurso</div>
+          <Link to='/detalles' className='consejo__text__Link'>Detalles</Link>
+        </div>
         <div>
           {/* Cedula */}
           <div className='Container__Label-Email'>
