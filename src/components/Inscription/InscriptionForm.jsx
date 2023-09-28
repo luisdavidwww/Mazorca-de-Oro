@@ -30,7 +30,7 @@ function isValidEmail(email) {
 //Formulario General
 function InscriptionForm() {
 
-  const { CustBillID, name, lastName, email, password, telefono, direccion, onChange, onChangeNumber } = useForm({
+  const { CustBillID, name, lastName, email, telefono, direccion, onChange, onChangeNumber } = useForm({
     CustBillID: '',
     name: '',
     lastName:'',
@@ -117,14 +117,15 @@ function InscriptionForm() {
       'Authorization': 'Bearer ' + token,
     };
 
-    let dataToSend = {
+    let dataToSend = {//CustAddres1
       "CustBillID": CustBillID,
       "CustEmail": email,
       "CustName1": name,
       "CustName2": lastName,
       "CustPhone": telefono,
-      "CityID": 1,
-      "StateID": 1,
+      "CityID": state,
+      "StateID": city,
+      "CustAddres1":direccion,
       "User3": "wwww.pruebadeurl.com/sdsjdsjds/aaaaaaa",
     };
     

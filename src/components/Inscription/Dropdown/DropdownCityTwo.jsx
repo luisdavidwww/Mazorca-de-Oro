@@ -19,9 +19,9 @@ const DropdownCity = ({ Data, IdState, ChangeCity }) => {
     }
   };
 
-  const handleOptionClick = (ciudad) => {
+  const handleOptionClick = (ciudad, id) => {
     setSelectedOption(ciudad);
-    ChangeCity(ciudad);
+    ChangeCity(id);
     setIsOpen(false);
   };
 
@@ -63,7 +63,7 @@ const DropdownCity = ({ Data, IdState, ChangeCity }) => {
             {filteredData.map((item, index) => (
               <div
                 key={index}
-                onClick={() => handleOptionClick(item.ciudad)}
+                onClick={() => handleOptionClick(item.ciudad, item.id )}
                 className="List__Options"
               >
                 { item.ciudad }

@@ -27,7 +27,7 @@ const DropdownOptions = ({ Data, ChangeState, ChangeCity }) => {
   const handleOptionClick = (estado, id ) => {
     setSelectedOption(estado);
     //Aqui va cambiando el estado a elegir
-    ChangeState(estado);
+    ChangeState(id);
     setSelectedId(id);
     setIsOpen(false);
   };
