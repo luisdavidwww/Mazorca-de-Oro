@@ -6,6 +6,8 @@ import Patrocinantes from "./Patrocinantes";
 //Imagenes 
 import  mazorca   from "../../static/images/home/Mazorca-Oro.webp";
 import  mazorcaPNG   from "../../static/images/home/MazorcaPrueba.png";
+import  mazorcaWEBP   from "../../static/images/home/MazorcaPruebaW.webp";
+
 //Estilos
 import './Home.css';
 
@@ -22,7 +24,7 @@ function HomeComponent() {
       </div>
       */}
       <div className='img-Container'>
-        <img src={ mazorcaPNG } alt="MazorcaDEOro" className='img-Home-two' />
+        <img src={ mazorcaWEBP } alt="MazorcaDEOro" className='img-Home-two' />
       </div>
       
       {/* Boton de Acción */}

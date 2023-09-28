@@ -111,7 +111,7 @@ function Navbar() {
           </li>
           {/* Participa Ahora */}
           <li className='nav-item'>
-            <button className='btn-Incripción' >Participa Ahora</button>
+            <Link to='/inscripcion' className='btn-Incripción'>Participa Ahora</Link>
           </li>
         </ul>
       </nav>
