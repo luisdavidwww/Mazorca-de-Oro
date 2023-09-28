@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from '../../hooks/useForm.tsx';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 //Componentes
 import DropdownOptions from './Dropdown/DropdownOptions.jsx';
@@ -94,6 +95,7 @@ function InscriptionForm() {
     if (!hasError) {
       // Si no hay errores, intenta iniciar sesión
       setErrorTrim(false);
+      PostRegister();
       console.log('Data:', {CustBillID,name,lastName, email, telefono, state, city, direccion, selectedFile});
 
       setShowWelcomeMessage(true); // Muestra el mensaje de bienvenida
@@ -102,6 +104,44 @@ function InscriptionForm() {
         setShowWelcomeMessage(false);
       }, 5000);
     }
+  };
+
+
+  //Metodo para registrarse en el concurso
+  const PostRegister = async() => {
+
+    const token = 'CSG_UkVx5q8iMCLG5nAKtHpdA3VqsJ0NbHG-jWSTW3HcAfy/5Cr=0Ae0A3NV-A?X8xhKzafd?SGu?uzU!IsKubptuy3joFGRs9GBayBjMYKWN3lsAHrbdj6GbyzFx4yn';
+
+    const headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + token,
+    };
+
+    let dataToSend = {
+      "CustBillID": CustBillID,
+      "CustEmail": email,
+      "CustName1": name,
+      "CustName2": lastName,
+      "CustPhone": telefono,
+      "CityID": 1,
+      "StateID": 1,
+      "User3": "wwww.pruebadeurl.com/sdsjdsjds/aaaaaaa",
+    };
+    
+    try {
+      const response = await axios.post(
+        `http://csgback.casagri-group.com/Csg/`,
+        dataToSend,
+        { headers }
+      );
+      const data = response.data;
+      console.log(data);
+
+    } catch (error) {
+      console.error(error);
+    }
+
+    
   };
 
 
