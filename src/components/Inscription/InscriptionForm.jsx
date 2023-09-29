@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from '../../hooks/useForm.tsx';
 import { Link } from 'react-router-dom';
+import { uploadFile } from '../../Firebase/config.js';
 import axios from 'axios';
 
 //Componentes
@@ -58,6 +59,9 @@ function InscriptionForm() {
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     setSelectedFile(file);
+    console.log('subido');
+    console.log(file);
+    uploadFile(file);
     // Verifica la validez del formulario cuando se cambia el archivo
     checkFormValidity();
   };
