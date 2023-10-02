@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from '../../hooks/useForm.tsx';
 import { Link } from 'react-router-dom';
-import { uploadFile } from '../../Firebase/config.js';
+import { uploadFile, uploadFileNew } from '../../Firebase/config.js';
 import axios from 'axios';
 
-//Componentes
+//Componentes AlertSlide
 import DropdownOptions from './Dropdown/DropdownOptions.jsx';
+import Loader from '../Loader/Loader.jsx';
+import AlertSlide from '../Alert/AlertSlide.jsx';
 
 //Data
 import State from '../../Data/State.json';
@@ -31,14 +33,16 @@ function isValidEmail(email) {
 //Formulario General
 function InscriptionForm() {
 
+
   const { CustBillID, name, lastName, email, telefono, direccion, onChange, onChangeNumber } = useForm({
     CustBillID: '',
     name: '',
-    lastName:'',
+    lastName: '',
     email: '',
     telefono: '',
-    direccion:''
+    direccion: ''
   });
+
 
   //estados para la Lógica del Formulario
   const [selectedFile, setSelectedFile] = useState(null);
@@ -51,17 +55,21 @@ function InscriptionForm() {
   const [messageEmail, setMessageEmail] = useState("");
 
   //Mensaje de Inscripción Exitosa
-  const [showWelcomeMessage, setShowWelcomeMessage] = useState(false);
+  const [ ExitMessage, setExitMessage] = useState(false);
+
+  //Estados de Carga del Video
+  const [loanding, setLoanding] = useState(false);
+  const [estadoCarga, setEstadoCarga] = useState(null);
+  const [messageError, serMessageError] = useState("");
+  const [urlVideo, setUrlVideo] = useState("");
 
 
 
-  //Añadir Video
-  const handleFileChange = (event) => {
+  //Añadir Video a la Web
+  const handleFileChange = async (event) => {
     const file = event.target.files[0];
     setSelectedFile(file);
-    console.log('subido');
-    console.log(file);
-    uploadFile(file);
+   
     // Verifica la validez del formulario cuando se cambia el archivo
     checkFormValidity();
   };
@@ -76,7 +84,7 @@ function InscriptionForm() {
   };
 
   //Metodo para registrarse en el concurso
-  const onRegisterVideo = (e) => {
+  const onRegisterVideo = async(e) => {
     e.preventDefault()
 
     // Variable para rastrear si hay errores
@@ -95,24 +103,34 @@ function InscriptionForm() {
       setMessageEmail(""); // Borra el mensaje de error si no hay errores en el correo electrónico
     }
 
-
+    // Si no hay errores
     if (!hasError) {
-      // Si no hay errores, intenta iniciar sesión
-      setErrorTrim(false);
-      PostRegister();
-      console.log('Data:', {CustBillID,name,lastName, email, telefono, state, city, direccion, selectedFile});
 
-      setShowWelcomeMessage(true); // Muestra el mensaje de bienvenida
-      // Oculta el mensaje después de 3 segundos
-      setTimeout(() => {
-        setShowWelcomeMessage(false);
-      }, 5000);
+      //Se Borra la variable de errores
+      setErrorTrim(false);
+
+      //Se Borra la variable de errores
+      setErrorTrim(false);
+
+      setLoanding(true);
+      try {
+        const urlBaseVideo = await uploadFileNew(selectedFile);
+        setEstadoCarga("exitoso"); // Indicar que la carga fue exitosa
+        setUrlVideo(urlBaseVideo);
+        PostRegister(urlBaseVideo);
+      }
+      catch(error) {
+        console.log(error)
+        setEstadoCarga("error"); // Indicar que ocurrió un error en la carga
+      };
+ 
+      
     }
   };
 
 
   //Metodo para registrarse en el concurso
-  const PostRegister = async() => {
+  const PostRegister = async(urlBaseVideo) => {
 
     const token = 'CSG_UkVx5q8iMCLG5nAKtHpdA3VqsJ0NbHG-jWSTW3HcAfy/5Cr=0Ae0A3NV-A?X8xhKzafd?SGu?uzU!IsKubptuy3joFGRs9GBayBjMYKWN3lsAHrbdj6GbyzFx4yn';
 
@@ -121,16 +139,16 @@ function InscriptionForm() {
       'Authorization': 'Bearer ' + token,
     };
 
-    let dataToSend = {//CustAddres1
+    let dataToSend = {
       "CustBillID": CustBillID,
       "CustEmail": email,
       "CustName1": name,
       "CustName2": lastName,
       "CustPhone": telefono,
-      "CityID": state,
-      "StateID": city,
+      "CityID": city,
+      "StateID": state,
       "CustAddres1":direccion,
-      "User3": "wwww.pruebadeurl.com/sdsjdsjds/aaaaaaa",
+      "User3": urlBaseVideo,
     };
     
     try {
@@ -139,11 +157,44 @@ function InscriptionForm() {
         dataToSend,
         { headers }
       );
-      const data = response.data;
-      console.log(data);
+
+      if ( response.status == 200 ) {
+
+        const data = response.data;
+        serMessageError("Felicidades! Ahora estas participando en el concurso Mazorca de Oro");
+        setExitMessage(true);
+
+        //se elimina elmesnaje "Subiendo Video"
+        setLoanding(false);
+
+        //Repuestas
+        console.log("datos finales");
+        console.log(response.status);
+        console.log(data);
+
+      } else {
+
+        serMessageError("Ha ocurrido un error al inscribirte. Intenta de nuevo");
+        setExitMessage(true);
+
+        //se elimina elmesnaje "Subiendo Video"
+        setLoanding(false);
+
+        console.log(response.data);
+        console.log(response.status);
+        
+      }
 
     } catch (error) {
+      serMessageError("Ha ocurrido un error al inscribirte. Intenta de nuevo");
+      setExitMessage(true);
+
+      //se elimina elmesnaje "Subiendo Video"
+      setLoanding(false);
+
       console.error(error);
+
+      
     }
 
     
@@ -154,178 +205,197 @@ function InscriptionForm() {
     checkFormValidity();
   }, [CustBillID, name, lastName, email, telefono, direccion, selectedFile, state, city]);
 
+  useEffect(() => {
+
+  }, [ExitMessage]);
+
 
 
   return (
     <>
-      <div className='Inscripction-container'>
-        <h1 className='Titulo-Principal-Inscripcion'>
-          Inscribete <span style={{ color: '#ffd800' }}>Ahora</span>
-        </h1>
-
-        <div className='consejo__text'>
-          <div className='consejo__text__reco'>*Recuerda leer las instrucciones a detalle para cumplir con los requisitos del concurso</div>
-          <Link to='/detalles' className='consejo__text__Link'>Detalles</Link>
+    
+        <div>
+          { loanding ? (<Loader/>):null }
         </div>
         <div>
-          {/* Cedula */}
-          <div className='Container__Label-Email'>
-            <label htmlFor='CustBillID' className='Label__Form'>
-              Cedula ID
-            </label>
-            <input
-              type='number'
-              className='Input__Form'
-              id='CustBillID'
-              placeholder='Documento'
-              value={CustBillID} 
-              autoComplete='off'
-              inputMode=''
-              onChange={(e) => onChangeNumber(e.target.value, 'CustBillID', 'number' )}
-            />
-          </div>
-
-          {/* Nombres */}
-          <div className='Container__Label-Email'>
-            <label htmlFor='name' className='Label__Form'>
-              Nombres Completo
-            </label>
-            <input
-              type='text'
-              className='Input__Form'
-              id='name'
-              placeholder='Ingrese su Nombre Completo'
-              value={name}
-              autoComplete='off'
-              onChange={(e) => onChange(e.target.value, 'name','letters')}
-              
-            />
-          </div>
-
-          {/* Apellidos */}
-          <div className='Container__Label-Email'>
-            <label htmlFor='lastName' className='Label__Form'>
-              Apellidos Completo
-            </label>
-            <input
-              type='text'
-              className='Input__Form'
-              id='lastName'
-              placeholder='Ingrese sus Apellidos'
-              value={lastName}
-              autoComplete='off'
-              onChange={(e) => onChange(e.target.value, 'lastName', 'letters')}
-              
-            />
-          </div>
-
-          {/* Correo Electrónico */}
-          <div className='Container__Label-Email'>
-            <label htmlFor='email' className='Label__Form'>
-              Correo Electrónico
-            </label>
-            <input
-              type='email'
-              className={errorTrim && messageEmail ? 'Input__Form-Error':'Input__Form'}
-              id='email'
-              placeholder='Correo electrónico'
-              value={email}
-              autoComplete='off'
-              onChange={(e) => onChange(e.target.value, 'email', 'emailValidator')}
-            />
-              {errorTrim && messageEmail && (
-                <div className='Mensaje__Error'>
-                  <div className='MensajeError__Input' style={{position:"absolute"}}>{messageEmail}</div>
-                    {/*<OutlinedAlerts ErrorMessage={messageEmail} />*/}
-                </div>
-              )}
-          </div>
-
-          {/* Telefono */}
-          <div className='Container__Label-Email'>
-            <label for='telefono' className='Label__Form'>
-              Teléfono
-            </label>
-            <input
-              type='number'
-              className='Input__Form'
-              id='telefono'
-              placeholder='Teléfono'
-              value={telefono} 
-              autoComplete='off'
-              onChange={(e) => onChangeNumber(e.target.value, 'telefono', 'number' )}
-              
-            />
-          </div>
-
-          {/* Estado Y Ciudad */}
-          <div className='Container__Label-Email'>
-            <div className='Label__Form'>
-              Estado
-            </div>
-            <DropdownOptions Data={ State } ChangeState={ setState } ChangeCity={ setCity }/>
-          </div>
-
-          {/* Dirección */}
-          <div className='Container__Label-Email'>
-            <label htmlFor='direccion' className='Label__Form'>
-              Dirección
-            </label>
-            <input
-              type='text'
-              className='Input__Form'
-              id='direccion'
-              placeholder='Ingrese su Dirección'
-              value={direccion}
-              autoComplete='off'
-              onChange={(e) => onChange(e.target.value, 'direccion','letters')}
-            />
-          </div>
-
-          {/* Carga de archivo con estilo */}
-          <div className='Container__Label-Dropbox'>
-           <div for='video' className='Label__Form'>
-              Cargar Video
-            </div>
-            <label htmlFor='file' className='Label__Form'>
-              <div className='FileUpload'>
-                <div className='UploadIcon'>
-                  <i className='upload-icon' /> 
-                </div>
-                <div className='UploadText'>
-                  {selectedFile ? 
-                  <div style={{color:"white", fontSize:'14px',display:'flex' }}>
-                    <BsFillImageFill style={{fontSize:'21px' , marginRight:'15px',marginTop:'10px'}}/>
-                    <p>{  selectedFile.name } </p>
-                  </div> 
-                    : "Cargar Archivo"
-                  }
-                </div>
-              </div>
-            </label>
-            <input
-              type='file'
-              id='file'
-              accept='video/*' // Solo permite archivos de vídeo
-              onChange={handleFileChange}
-              style={{ display: 'none' }} 
-            />
-          </div>
-
-          {/* Boton */}
-          <div className='container-btn'>
-            <button
-              className={ isFormValid ? 'btn-form' : 'btn-form-inActive' }
-              type="submit"
-              onClick={(e) => { onRegisterVideo(e) }}
-              disabled={!isFormValid} // Habilita el botón solo si el formulario es válido
-            >
-              Enviar
-            </button>
-          </div>
-
+          {ExitMessage ? (<AlertSlide setExitMessage={setExitMessage} message={messageError}/>):null}
         </div>
+
+
+      <div className='Inscripction-container'>
+        
+        
+      <h1 className='Titulo-Principal-Inscripcion'>
+        Inscribete <span style={{ color: '#ffd800' }}>Ahora</span>
+      </h1>
+
+      <div className='consejo__text'>
+        <div className='consejo__text__reco'>*Recuerda leer las instrucciones a detalle para cumplir con los requisitos del concurso</div>
+        <Link to='/detalles' className='consejo__text__Link'>Detalles</Link>
+        </div>
+        <div>
+        {/* Cedula */}
+        <div className='Container__Label-Email'>
+          <label htmlFor='CustBillID' className='Label__Form'>
+            Cedula ID
+          </label>
+          <input
+            type='number'
+            className='Input__Form'
+            id='CustBillID'
+            placeholder='Documento'
+            value={CustBillID} 
+            autoComplete='off'
+            inputMode=''
+            onChange={(e) => onChangeNumber(e.target.value, 'CustBillID', 'number' )}
+          />
+        </div>
+
+        {/* Nombres */}
+        <div className='Container__Label-Email'>
+          <label htmlFor='name' className='Label__Form'>
+            Nombres Completo
+          </label>
+          <input
+            type='text'
+            className='Input__Form'
+            id='name'
+            placeholder='Ingrese su Nombre Completo'
+            value={name}
+            autoComplete='off'
+            onChange={(e) => onChange(e.target.value, 'name','letters')}
+            
+          />
+        </div>
+
+        {/* Apellidos */}
+        <div className='Container__Label-Email'>
+          <label htmlFor='lastName' className='Label__Form'>
+            Apellidos Completo
+          </label>
+          <input
+            type='text'
+            className='Input__Form'
+            id='lastName'
+            placeholder='Ingrese sus Apellidos'
+            value={lastName}
+            autoComplete='off'
+            onChange={(e) => onChange(e.target.value, 'lastName', 'letters')}
+            
+          />
+        </div>
+
+        {/* Correo Electrónico */}
+        <div className='Container__Label-Email'>
+          <label htmlFor='email' className='Label__Form'>
+            Correo Electrónico
+          </label>
+          <input
+            type='email'
+            className={errorTrim && messageEmail ? 'Input__Form-Error':'Input__Form'}
+            id='email'
+            placeholder='Correo electrónico'
+            value={email}
+            autoComplete='off'
+            onChange={(e) => onChange(e.target.value, 'email', 'emailValidator')}
+          />
+            {errorTrim && messageEmail && (
+              <div className='Mensaje__Error'>
+                <div className='MensajeError__Input' style={{position:"absolute"}}>{messageEmail}</div>
+                  {/*<OutlinedAlerts ErrorMessage={messageEmail} />*/}
+              </div>
+            )}
+        </div>
+
+        {/* Telefono */}
+        <div className='Container__Label-Email'>
+          <label for='telefono' className='Label__Form'>
+            Teléfono
+          </label>
+          <input
+            type='number'
+            className='Input__Form'
+            id='telefono'
+            placeholder='Teléfono'
+            value={telefono} 
+            autoComplete='off'
+            onChange={(e) => onChangeNumber(e.target.value, 'telefono', 'number' )}
+            
+          />
+        </div>
+
+        {/* Estado Y Ciudad */}
+        <div className='Container__Label-Email'>
+          <div className='Label__Form'>
+            Estado
+          </div>
+          <DropdownOptions Data={ State } ChangeState={ setState } ChangeCity={ setCity }/>
+        </div>
+
+        {/* Dirección */}
+        <div className='Container__Label-Email'>
+          <label htmlFor='direccion' className='Label__Form'>
+            Dirección
+          </label>
+          <input
+            type='text'
+            className='Input__Form'
+            id='direccion'
+            placeholder='Ingrese su Dirección'
+            value={direccion}
+            autoComplete='off'
+            onChange={(e) => onChange(e.target.value, 'direccion','letters')}
+          />
+        </div>
+
+        {/* Carga de archivo con estilo */}
+        <div className='Container__Label-Dropbox'>
+         <div for='video' className='Label__Form'>
+            Cargar Video
+          </div>
+          <label htmlFor='file' className='Label__Form'>
+            <div className='FileUpload'>
+              <div className='UploadIcon'>
+                <i className='upload-icon' /> 
+              </div>
+              <div className='UploadText'>
+                {selectedFile ? 
+                <div style={{color:"white", fontSize:'14px',display:'flex' }}>
+                  <BsFillImageFill style={{fontSize:'21px' , marginRight:'15px',marginTop:'10px'}}/>
+                  <p>{  selectedFile.name } </p>
+                </div> 
+                  : "Cargar Archivo"
+                }
+              </div>
+            </div>
+          </label>
+          <input
+            type='file'
+            id='file'
+            accept='video/*' // Solo permite archivos de vídeo
+            onChange={handleFileChange}
+            style={{ display: 'none' }} 
+          />
+          {/* Mensajes de Carga Para el Usuario  */}
+          { estadoCarga == 'exitoso' ? (<div className='consejo__text'>Video Cargado Con éxito</div>):(null)}
+          { estadoCarga == 'error' ? (<div className='error__text'>Error al cargar el archivo</div>):(null)}
+        </div>
+
+        {/* Boton */}
+        <div className='container-btn'>
+          <button
+            className={ isFormValid ? 'btn-form' : 'btn-form-inActive' }
+            type="submit"
+            onClick={(e) => { onRegisterVideo(e) }}
+            disabled={!isFormValid} // Habilita el botón solo si el formulario es válido
+          >
+            Enviar
+          </button>
+        </div>
+
       </div>
+      </div>
+
     </>
   );
 }

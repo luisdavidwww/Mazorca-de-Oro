@@ -132,6 +132,24 @@
   color: rgb(255, 255, 255);
 }
 
+.error__text{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  /*text-transform: uppercase;*/
+  padding-top: 0rem;
+  margin-top: 1rem;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: all .25s ease-in-out;
+  color: rgb(209, 40, 40);
+}
+
 .consejo__text__reco{
   padding-top: 1rem;
   margin-right: 1rem;
