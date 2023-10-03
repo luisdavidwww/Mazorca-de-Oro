@@ -1,11 +1,18 @@
 /*Loanding*/
 .loanding__Container{
     display: flex;
-    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Cambia de absolute a fixed */
+    top: 0; /* Ancla el elemento en la parte superior de la ventana */
+    left: 0; /* Ancla el elemento en la parte izquierda de la ventana */
     width: 100%;
-    height: 175vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
    }
+
    .loading{
     width: 50px;
     height: 50px;
@@ -15,15 +22,36 @@
     margin: -25px 0 0 -25px
    }
 
-   .Loading__title{
+   .container__titles{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
+   }
+
+   .Loading__title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 2rem;
     color: #ffffff;
     font-size: 15px;
+    letter-spacing: 0.5px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    margin-top: 8rem;
+  }
+  .Loading__Subtitle{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    color: #ffffff;
+    font-size: 13px;
     letter-spacing: 0.5px;
     font-family: "Montserrat";
     font-weight: 500;
@@ -31,11 +59,5 @@
 
    @media screen and (max-width: 960px) {
 
-    .loanding__Container{
-        display: flex;
-        position: absolute;
-        width: 100%;
-        height: 198vh;
-       }
 
    }

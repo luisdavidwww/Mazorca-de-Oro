@@ -54,7 +54,7 @@ function DetallesConcurso() {
                 <p className='text__detail-interno'>- Tamaño de tu finca</p>
               </li>
               <li>
-                <p className='text__detail-interno'>- Que ventajas ves en el 8719</p>
+                <p className='text__detail-interno'>- Que ventajas ves en el DK-8719</p>
               </li>
               <li>
                 <p className='text__detail-interno'>- Densidad de la cosecha</p>

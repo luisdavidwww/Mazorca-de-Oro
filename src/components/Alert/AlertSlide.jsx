@@ -1,4 +1,5 @@
-import  React, { useEffect } from 'react';
+import  React from 'react';
+import { useNavigate } from "react-router-dom";
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -11,14 +12,19 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function AlertSlide({setExitMessage, message}) {
+export default function AlertSlide({setExitMessage, message, registro }) {
+
   const [open, setOpen] = React.useState(true);
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+  const navigate = useNavigate();
 
-  const handleClose = () => {
+
+  const handleClose = (registro) => {
+    if(registro){
+      navigate('/');
+      window.scrollTo(0, 0);
+    };
+
     setExitMessage(false);
   };
 
@@ -38,11 +44,7 @@ export default function AlertSlide({setExitMessage, message}) {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          {/*
-          <Button onClick={handleClose}>no</Button>
-          <Button onClick={handleClose}>si</Button>
-          */}
-          <Button onClick={handleClose}>Aceptar</Button>
+          <Button onClick={() => handleClose(registro)}>Aceptar</Button>
         </DialogActions>
       </Dialog>
     </div>

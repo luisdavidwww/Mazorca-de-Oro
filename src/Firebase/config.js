@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getStorage, ref, uploadBytes, getDownloadURL  } from "firebase/storage";
+import { getStorage, ref, uploadBytes, getDownloadURL, uploadBytesResumable  } from "firebase/storage";
 import { v4 } from 'uuid';
 
 // Your web app's Firebase configuration
@@ -55,3 +55,38 @@ export async function uploadFileNew(file) {
   const url = await getDownloadURL(storageRef);
   return url;
 }
+
+
+export async function uploadFileWithProgress(file, onProgressCallback) {
+
+  const uniqueFileName = v4();
+  const storageRef = ref(storage, uniqueFileName);
+
+  const uploadTask = uploadBytesResumable(storageRef, file);
+
+  uploadTask.on('state_changed',
+    (snapshot) => {
+      const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+      const formattedProgress = parseFloat(progress.toFixed(2)); // Redondea a 2 decimales
+      if (onProgressCallback) {
+        onProgressCallback(formattedProgress);
+      }
+    },
+    (error) => {
+      console.error('Error al cargar el archivo:', error);
+    },
+    async () => {
+      const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
+      // La carga se ha completado con éxito, puedes hacer algo aquí si es necesario
+    }
+  );
+
+  await uploadTask;
+  const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
+
+  return downloadURL;
+}
+
+
+
+

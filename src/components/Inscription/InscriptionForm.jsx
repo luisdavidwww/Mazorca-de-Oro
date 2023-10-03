@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from '../../hooks/useForm.tsx';
 import { Link } from 'react-router-dom';
-import { uploadFile, uploadFileNew } from '../../Firebase/config.js';
+import { uploadFile, uploadFileNew, uploadFileWithProgress } from '../../Firebase/config.js';
 import axios from 'axios';
 
 //Componentes AlertSlide
@@ -50,18 +50,23 @@ function InscriptionForm() {
   const [state, setState] = useState(null);
   const [city, setCity] = useState(null);
 
-  //Estados Paralso errores
+  //Estados Para los errores
   const [errorTrim, setErrorTrim] = useState(false);
   const [messageEmail, setMessageEmail] = useState("");
 
   //Mensaje de Inscripción Exitosa
   const [ ExitMessage, setExitMessage] = useState(false);
+  const [ registroExitoso, setRegistroExitoso] = useState(false);
 
   //Estados de Carga del Video
   const [loanding, setLoanding] = useState(false);
   const [estadoCarga, setEstadoCarga] = useState(null);
   const [messageError, serMessageError] = useState("");
   const [urlVideo, setUrlVideo] = useState("");
+
+
+  //Variables para la barra de carga
+  const [progress, setProgress] = useState(0);
 
 
 
@@ -112,9 +117,12 @@ function InscriptionForm() {
       //Se Borra la variable de errores
       setErrorTrim(false);
 
+      //variable para animacion de carga
       setLoanding(true);
+      setProgress(0);
+
       try {
-        const urlBaseVideo = await uploadFileNew(selectedFile);
+        const urlBaseVideo = await uploadFileWithProgress(selectedFile, setProgress);
         setEstadoCarga("exitoso"); // Indicar que la carga fue exitosa
         setUrlVideo(urlBaseVideo);
         PostRegister(urlBaseVideo);
@@ -122,6 +130,7 @@ function InscriptionForm() {
       catch(error) {
         console.log(error)
         setEstadoCarga("error"); // Indicar que ocurrió un error en la carga
+        setLoanding(false);
       };
  
       
@@ -158,47 +167,45 @@ function InscriptionForm() {
         { headers }
       );
 
+      //mensaje exitoso en estado Base
+      setRegistroExitoso(false);
+
       if ( response.status == 200 ) {
 
         const data = response.data;
         serMessageError("Felicidades! Ahora estas participando en el concurso Mazorca de Oro");
         setExitMessage(true);
+        setRegistroExitoso(true);
 
         //se elimina elmesnaje "Subiendo Video"
         setLoanding(false);
-
-        //Repuestas
-        console.log("datos finales");
-        console.log(response.status);
-        console.log(data);
 
       } else {
 
         serMessageError("Ha ocurrido un error al inscribirte. Intenta de nuevo");
         setExitMessage(true);
+        setRegistroExitoso(false);
 
         //se elimina elmesnaje "Subiendo Video"
         setLoanding(false);
-
-        console.log(response.data);
-        console.log(response.status);
         
       }
 
     } catch (error) {
       serMessageError("Ha ocurrido un error al inscribirte. Intenta de nuevo");
       setExitMessage(true);
+      setRegistroExitoso(false);
 
       //se elimina elmesnaje "Subiendo Video"
       setLoanding(false);
 
-      console.error(error);
-
-      
     }
 
     
   };
+
+
+
 
 
   useEffect(() => {
@@ -213,12 +220,11 @@ function InscriptionForm() {
 
   return (
     <>
-    
         <div>
-          { loanding ? (<Loader/>):null }
+          { loanding ? (<Loader progressVideo={progress} />):null }
         </div>
         <div>
-          {ExitMessage ? (<AlertSlide setExitMessage={setExitMessage} message={messageError}/>):null}
+          {ExitMessage ? (<AlertSlide setExitMessage={setExitMessage} message={messageError} registro={registroExitoso} />):null}
         </div>
 
 

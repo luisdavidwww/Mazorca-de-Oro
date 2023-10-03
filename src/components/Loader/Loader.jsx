@@ -30,12 +30,15 @@ function FacebookCircularProgress(props) {
   );
 }
 
-const Loader = () => {
+const Loader = ({progressVideo}) => {
   return (
     <>
             <div className='loanding__Container'>
               <FacebookCircularProgress />
-              <div className='Loading__title'>Subiendo Video</div>
+
+                <div className='Loading__title'>Subiendo Video</div>
+                <div className='Loading__Subtitle'>Progreso: {progressVideo} %</div>
+              
             </div>
     </>
   )

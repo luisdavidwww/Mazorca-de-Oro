@@ -1,0 +1,39 @@
+.container__Dialog{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+  }
+
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper{
+    background-color: #ffd800;
+  }
+
+
+.Alert__title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    padding: auto;
+    color: black;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    font-family: "Montserrat";
+    font-weight: 500;
+  }
+
+  .btn__Alert{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    font-family: "Montserrat";
+    font-weight: 700;
+  }
