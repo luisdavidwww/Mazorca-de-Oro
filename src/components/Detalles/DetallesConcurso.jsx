@@ -32,6 +32,12 @@ function DetallesConcurso() {
           <li>
             <p className='text__detail'>
               <AiFillCheckCircle style={{marginRight:'0.5rem',color:'#ffd800'}}/>
+              Tu lote debe ser Mínimo de 10 hectáreas
+            </p>
+          </li>
+          <li>
+            <p className='text__detail'>
+              <AiFillCheckCircle style={{marginRight:'0.5rem',color:'#ffd800'}}/>
               Debes Llenar todo el formulario de la Página web de registro incluyendo el video en el lote
             </p>
           </li>

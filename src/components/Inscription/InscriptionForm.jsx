@@ -162,7 +162,7 @@ function InscriptionForm() {
     
     try {
       const response = await axios.post(
-        `http://csgback.casagri-group.com/Csg/`,
+        `https://csgback.casagri-group.com/Csg/`,
         dataToSend,
         { headers }
       );
