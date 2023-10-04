@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 
 //Logo Footer 
 import  MazorcaOro   from "../../../static/images/Navbar/Mazorca-Oro.svg";
@@ -13,6 +14,9 @@ import './Footer.css'
 
 
 const Footer = () => {
+    const navigate = useNavigate();
+
+
     return (
         <footer className="color__footer">
             {/* Contenedor Principal */}

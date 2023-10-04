@@ -243,7 +243,7 @@ function InscriptionForm() {
         {/* Cedula */}
         <div className='Container__Label-Email'>
           <label htmlFor='CustBillID' className='Label__Form'>
-            Cedula ID
+            Cedula
           </label>
           <input
             type='number'

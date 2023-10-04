@@ -63,7 +63,7 @@ function DetallesConcurso() {
                 <p className='text__detail-interno'>- Que ventajas ves en el DK-8719</p>
               </li>
               <li>
-                <p className='text__detail-interno'>- Densidad de la cosecha</p>
+                <p className='text__detail-interno'>- Población de plantas a cosecha</p>
               </li>
             </ul>
           </li>

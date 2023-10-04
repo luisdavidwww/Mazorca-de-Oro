@@ -53,7 +53,7 @@ const CorporatePolicy = ({component}) => {
                     
                     <div className='cards__item__info-pc'>
                         <h5 className='cards__item__text-pc'></h5>
-                        <p className='cards__item__p-two'>El área sembrada, y lo que más te gusta del híbrido 8719.</p>  
+                        <p className='cards__item__p-two'>El área sembrada, y lo que más te gusta del híbrido DK-8719.</p>  
                     </div> 
                 </a>
             </li>
@@ -68,7 +68,7 @@ const CorporatePolicy = ({component}) => {
                     
                     <div className='cards__item__info-pc'>
                         <h5 className='cards__item__text-pc'></h5>
-                        <p className='cards__item__p-two'>La cantidad cosechada en la temporada (actual o pasada), y si hay algo más que quieras contar de tu mazorca (peso, líneas etc.)</p>  
+                        <p className='cards__item__p-two'>La población de plantas a cosecha, y si hay algo más que quieras contar de tu mazorca (peso, líneas etc.)</p>  
                     </div> 
                 </a>
             </li>
