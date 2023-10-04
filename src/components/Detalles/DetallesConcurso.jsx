@@ -26,44 +26,41 @@ function DetallesConcurso() {
           <li>
             <p className='text__detail'>
               <AiFillCheckCircle style={{marginRight:'0.5rem',color:'#ffd800'}}/>
-              El único hibrido que puede participar es el DK-8719
+              El único hibrido que puede participar es el DK-8719.
             </p>
           </li>
           <li>
             <p className='text__detail'>
               <AiFillCheckCircle style={{marginRight:'0.5rem',color:'#ffd800'}}/>
-              Tu lote debe ser Mínimo de 10 hectáreas
+              Tu lote debe ser Mínimo de 10 hectáreas.
             </p>
           </li>
           <li>
             <p className='text__detail'>
               <AiFillCheckCircle style={{marginRight:'0.5rem',color:'#ffd800'}}/>
-              Debes Llenar todo el formulario de la Página web de registro incluyendo el video en el lote
+              Debes Llenar todo el formulario de la Página web de registro incluyendo el video en el lote.
             </p>
           </li>
           <li>
             <p className='text__detail'>
               <AiFillCheckCircle style={{marginRight:'0.5rem',color:'#ffd800'}}/>
-              El video debe durar un máximo de 2 minutos contener la siguiente información:
+              El video debe durar un máximo de 2 minutos, y contener la siguiente información:
             </p>
             <ul className='Detail__text__Container-interno' style={{margin:'0px', padding:'0px'}}>
               <li>
-                <p className='text__detail-interno'>- Nombre y Apellido</p>
+                <p className='text__detail-interno'>- Nombre y Apellido.</p>
               </li>
               <li>
-                <p className='text__detail-interno'>- Cuánto tiempo llevas como agricultor</p>
+                <p className='text__detail-interno'>- Cuánto tiempo llevas como agricultor.</p>
               </li>
               <li>
                 <p className='text__detail-interno'>- ¿De donde eres?</p>
               </li>
               <li>
-                <p className='text__detail-interno'>- Tamaño de tu finca</p>
+                <p className='text__detail-interno'>- Que ventajas ves en el DK-8719.</p>
               </li>
               <li>
-                <p className='text__detail-interno'>- Que ventajas ves en el DK-8719</p>
-              </li>
-              <li>
-                <p className='text__detail-interno'>- Población de plantas a cosecha</p>
+                <p className='text__detail-interno'>- Población de plantas a cosecha.</p>
               </li>
             </ul>
           </li>
@@ -76,19 +73,19 @@ function DetallesConcurso() {
           <li>
             <p className='text__detail'>
               <AiFillCheckCircle style={{marginRight:'0.5rem',color:'#ffd800'}}/>
-              En caso de obtener el primer premio, debes contar con la documentación necesaria para viajar a México
+              En caso de obtener el primer premio, debes contar con la documentación necesaria para viajar a México.
             </p>
           </li>
           <li>
             <p className='text__detail'>
               <AiFillCheckCircle style={{marginRight:'0.5rem',color:'#ffd800'}}/>
-              En caso de obtener el primer premio y no poseer la documentación necesaria para viajar a México, podrá acceder al segundo premio, y el segundo lugar obtendría el viaje
+              En caso de obtener el primer premio y no poseer la documentación necesaria para viajar a México, podrá acceder al segundo premio, y el segundo lugar obtendría el viaje.
             </p>
           </li>
           <li>
             <p className='text__detail'>
               <AiFillCheckCircle style={{marginRight:'0.5rem',color:'#ffd800'}}/>
-              El video de tu lote será publicado en el Facebook Oficial de Bayer
+              El video de tu lote será publicado en el Facebook Oficial de Bayer.
             </p>
           </li>
         </ul>
