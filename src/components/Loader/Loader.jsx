@@ -38,6 +38,7 @@ const Loader = ({progressVideo}) => {
 
                 <div className='Loading__title'>Subiendo Video</div>
                 <div className='Loading__Subtitle'>Progreso: {progressVideo} %</div>
+                <div className='Loading__Subtitle-two'>No cierre la página mientras el video se sube</div>
               
             </div>
     </>

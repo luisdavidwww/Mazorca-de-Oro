@@ -53,7 +53,7 @@ const Footer = () => {
                                 </a> 
                             </li>
                             <li className='footer__info__products__item-btn'>
-                                <button className='btn-Incripción-footer' >Participa Ahora</button>
+                                <a className='btn-Incripción-footer' href='/inscripcion' >Participa Ahora</a>
                             </li>
                         </ul>
                     </div>

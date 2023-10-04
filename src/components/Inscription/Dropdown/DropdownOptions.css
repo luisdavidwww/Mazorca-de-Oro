@@ -148,7 +148,7 @@ body .container__Options_Scroll {
     display: flex;
     position: absolute;
     margin-top: 3.6rem;
-    width: 350px;
+    width: 360px;
     color:  #E2E2E2;
     background-color: #161718;
     overflow-y: scroll !important;

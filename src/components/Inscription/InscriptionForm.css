@@ -428,6 +428,16 @@
     transition: all 0.3s ease-out;
   }
 
+  .text__ejemplo{
+    display: flex;
+    justify-content: end;
+    right: 2rem;
+    margin-left: 330px;
+    align-items: end;
+    text-align: end;
+    color: #6e6e6e;
+  }
+
   @media screen and (max-width: 768px) {
 
     .Titulo-Principal-Inscripcion{
@@ -494,6 +504,16 @@
     border: 1.9px solid #ffd800;
     border-radius: 50px;
     width: 150px;
+  }
+
+  .text__ejemplo{
+    display: flex;
+    justify-content: end;
+    right: 2rem;
+    margin-left: 200px;
+    align-items: end;
+    text-align: end;
+    color: #6e6e6e;
   }
   
   }

@@ -173,7 +173,7 @@ function InscriptionForm() {
       if ( response.status == 200 ) {
 
         const data = response.data;
-        serMessageError("Felicidades! Ahora estas participando en el concurso Mazorca de Oro");
+        serMessageError("¡Felicidades! Ya estas participando en el concurso Mazorca de Oro");
         setExitMessage(true);
         setRegistroExitoso(true);
 
@@ -241,19 +241,32 @@ function InscriptionForm() {
         </div>
         <div>
         {/* Cedula */}
+        {/* Cedula */}
         <div className='Container__Label-Email'>
           <label htmlFor='CustBillID' className='Label__Form'>
-            Cedula
+            Cédula
+            <span className='text__ejemplo'>Ej: 17874654</span>
           </label>
           <input
-            type='number'
+            type='text' /* Usar un tipo de entrada de texto */
+            pattern="[0-9]*" /* Establecer un patrón para permitir solo números */
             className='Input__Form'
             id='CustBillID'
             placeholder='Documento'
             value={CustBillID} 
             autoComplete='off'
-            inputMode=''
-            onChange={(e) => onChangeNumber(e.target.value, 'CustBillID', 'number' )}
+            inputMode='numeric' /* Establecer inputMode en "numeric" */
+            onFocus={(e) => {
+              e.target.setAttribute('inputmode', 'numeric');
+            }}
+            onBlur={(e) => {
+              e.target.removeAttribute('inputmode');
+            }}
+            onChange={(e) => {
+              // Aquí puedes realizar la validación adicional según tus necesidades
+              const inputValue = e.target.value;
+              onChangeNumber(inputValue, 'CustBillID', 'number');
+            }}
           />
         </div>
 
@@ -315,17 +328,28 @@ function InscriptionForm() {
 
         {/* Telefono */}
         <div className='Container__Label-Email'>
-          <label for='telefono' className='Label__Form'>
+          <label htmlFor='telefono' className='Label__Form'>
             Teléfono
           </label>
           <input
-            type='number'
+            type='text'
             className='Input__Form'
             id='telefono'
             placeholder='Teléfono'
             value={telefono} 
             autoComplete='off'
-            onChange={(e) => onChangeNumber(e.target.value, 'telefono', 'number' )}
+            inputMode='numeric' /* Establecer inputMode en "numeric" */
+            onFocus={(e) => {
+              e.target.setAttribute('inputmode', 'numeric');
+            }}
+            onBlur={(e) => {
+              e.target.removeAttribute('inputmode');
+            }}
+            onChange={(e) => {
+              // Aquí puedes realizar la validación adicional según tus necesidades
+              const inputValue = e.target.value;
+              onChangeNumber(inputValue, 'telefono', 'number' );
+            }}
             
           />
         </div>
